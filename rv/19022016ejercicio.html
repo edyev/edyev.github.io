@@ -24,8 +24,8 @@
         document.body.appendChild( renderer.domElement);
       </script>                                           
       <script>
-        var forma = new THREE.BoxGeometry(1,1,1);
-        var material = new THREE.MeshBasicMaterial({color: 0x00ff0a});
+        var forma = new THREE.BoxGeometry(1,2,1);
+        var material = new THREE.MeshBasicMaterial({color: 0x00f00a});
         var cubo = new THREE.Mesh( forma, material);
         escena.add( cubo);
         function render(){
