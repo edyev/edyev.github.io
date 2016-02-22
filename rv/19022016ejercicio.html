@@ -29,9 +29,10 @@
         var cubo = new THREE.Mesh( forma, material);
         escena.add( cubo);
         function render(){
-          requestAnimationFrame( render);
           cubo.rotation.x += 0.1;
           cubo.rotation.y += 0.1;
+          requestAnimationFrame( render);
+          
           renderer.render( escena, camara);
         }
         render();
