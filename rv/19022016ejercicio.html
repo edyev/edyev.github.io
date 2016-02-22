@@ -22,9 +22,9 @@
         var renderer = new THREE.WebGLRenderer();
         renderer.setSize( window.innerWidth, window.innerHeight);
         document.body.appendChild( renderer.domElement);
-      </script>                                           
+      </script>                                          
       <script>
-        var forma = new THREE.DodecahedronGeometry(1,1);
+        var forma = new THREE.DodecahedronGeometry(1,0);
         var material = new THREE.MeshBasicMaterial({color: 0x3ae1aa});
         var cubo = new THREE.Mesh( forma, material);
         escena.add( cubo);
