@@ -25,12 +25,10 @@
       </script>                                          
       <script>
         var forma = new THREE.SphereGeometry(1);
-        var material = new THREE.MeshNormalMaterial({color: 0x3ae1aa});
+        var material = new THREE.MeshNormalMaterial();
         var esfera= new THREE.Mesh( forma, material);
         escena.add( esfera);
         function render(){
-          cubo.rotation.x += 0.01;
-          cubo.rotation.y += 0.01;
           requestAnimationFrame( render);
           
           renderer.render( escena, camara);
