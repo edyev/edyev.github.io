@@ -25,11 +25,17 @@
         var figura = new THREE.Shape();
         figura.moveTo(10,10);
         figura.lineTo(10,40);
-        figura.lineTo(40,50);
-        figura.lineTo(50,40);
-        figura.lineTo(40,40);
-        figura.lineTo(10,10);
-        
+        figura.lineTo(40,30);
+        figura.lineTo(90,30);
+        figura.lineTo(30,10);
+        figura.lineTo(90,-10);
+        figura.lineTo(30,-10);
+         figura.lineTo(20,-40);
+         figura.lineTo(10,-10);
+         figura.lineTo(-10,-10);
+         figura.lineTo(10,0);
+         figura.lineTo(0,10);
+         figura.lineTo(10,10);
         var forma = new THREE.ShapeGeometry(figura);
         var malla = new THREE.Mesh(forma);
         escena.add(malla);
