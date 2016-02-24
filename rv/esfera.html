@@ -30,6 +30,8 @@
         escena.add( esfera);
         function render(){
           requestAnimationFrame( render);
+          esfera.rotation.x(0.1);
+          esfera.rotation.y(0.1);
           
           renderer.render( escena, camara);
         }
