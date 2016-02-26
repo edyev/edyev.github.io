@@ -13,7 +13,7 @@
       <script src="three.min.js"></script>
       <script>
         var escena = new THREE.Scene();
-        var fov = 75; 
+        var fov = 45; 
         var aspect = window.innerWidth / window.innerHeight;
         var near = 0.1;
         var far = 1000;
@@ -36,8 +36,9 @@
          figura.lineTo(80,40);
          figura.lineTo(30,40);
          figura.lineTo(0,0);
-        var forma = new THREE.ShapeGeometry(figura);
+        var forma = new THREE.ExtrudeGeometry(figura, (amount: 10));
         var malla = new THREE.Mesh(forma);
+      
         escena.add(malla);
         
         function loop(){
