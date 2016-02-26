@@ -25,10 +25,10 @@
         document.body.appendChild( renderer.domElement);
         var puntos = [];
         for ( var i = 0; i <= 50; i ++){
-            puntos.push(new THREE.Vector2(i*i*0.1,i*0.1)); 
+            puntos.push(new THREE.Vector2(i*0.1,i*i*0.1)); 
         }
         for ( var i = 50; i >= 0; i --){
-            puntos.push(new THREE.Vector2(0.1*i*i+5,0.1*i)); 
+            puntos.push(new THREE.Vector2(0.1*i,0.1*i*i+5)); 
         }
           
        
