@@ -24,11 +24,11 @@
         renderer.setSize( window.innerWidth, window.innerHeight);
         document.body.appendChild( renderer.domElement);
         var puntos = [];
-        var figura = new THREE.Shape();
-        puntos.push(new THREE.vector3(10,0,10));
-        puntos.push(new THREE.vector3(100,0,50));
-        puntos.push(new THREE.vector3(100,0,100));
-        puntos.push(new THREE.vector3(10,0,140));
+      
+        puntos.push(new THREE.Vector3(10,0,10));
+        puntos.push(new THREE.Vector3(100,0,50));
+        puntos.push(new THREE.Vector3(100,0,100));
+        puntos.push(new THREE.Vector3(10,0,140));
         
         
         var forma = new THREE.LatheGeometry(puntos);
