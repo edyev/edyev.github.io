@@ -24,17 +24,17 @@
         document.body.appendChild( renderer.domElement);
         var figura = new THREE.Shape();
         figura.moveTo(0,0);
-        figura.lineTo(-20,40);
+        figura.lineTo(-30,40);
         figura.lineTo(-80,40);
         figura.lineTo(-40,80);
         figura.lineTo(-80,120);
-        figura.lineTo(-20,120);
+        figura.lineTo(-30,120);
         figura.lineTo(0,160);
-         figura.lineTo(20,120);
+         figura.lineTo(30,120);
          figura.lineTo(80,120);
          figura.lineTo(40,80);
          figura.lineTo(80,40);
-         figura.lineTo(20,40);
+         figura.lineTo(30,40);
          figura.lineTo(0,0);
         var forma = new THREE.ShapeGeometry(figura);
         var malla = new THREE.Mesh(forma);
@@ -42,6 +42,8 @@
         
         function loop(){
           requestAnimationFrame( loop);
+          malla.rotation.x += 0.01;
+          malla.rotation.y += 0.01;
           
           renderer.render( escena, camara);
         }
