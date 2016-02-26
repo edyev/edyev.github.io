@@ -24,13 +24,15 @@
         renderer.setSize( window.innerWidth, window.innerHeight);
         document.body.appendChild( renderer.domElement);
         var puntos = [];
-      
-        puntos.push(new THREE.Vector2(10,10));
-        puntos.push(new THREE.Vector2(100,50));
-        puntos.push(new THREE.Vector2(75,75));
-        puntos.push(new THREE.Vector2(100,100));
-        puntos.push(new THREE.Vector2(10,140));
-        
+        for ( var i = 0; i <= 50; i ++){
+            puntos.push(new THREE.Vector2(i,i*i)); 
+        }
+        for ( var i = 50; i >= 0; i --){
+            puntos.push(new THREE.Vector2(i,i*i-10)); 
+        }
+          
+        }     
+         
         
         var forma = new THREE.LatheGeometry(puntos);
         var malla = new THREE.Mesh(forma);
