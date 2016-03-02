@@ -16,8 +16,8 @@ function setup(){
   THREE.GeometryUtils.merge(forma, esfera2);
   THREE.GeometryUtils.merge(forma, cilindro);
 
-  malla = new THREE.Scene();
-  var escena = new THREE.Scene();
+  malla = new THREE.Mesh();
+ escena = new THREE.Scene();
   escena.add( malla );
 
   camara = new THREE.PerspectiveCamera();
