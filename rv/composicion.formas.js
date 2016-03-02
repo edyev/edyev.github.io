@@ -5,7 +5,7 @@ function setup(){
   
   var esfera1 = new THREE.Mesh(esferaForma);
   var esfera2 = new THREE.Mesh(esferaForma);
-  var cilindro = new THREE.Mesh(cilindro);
+  var cilindro = new THREE.Mesh(cilindroForma);
 
   esfera1.position.y = 2;
   esfera2.position.y = -2;
