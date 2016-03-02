@@ -19,6 +19,8 @@ function setup(){
   malla = new THREE.Mesh();
  escena = new THREE.Scene();
   escena.add( malla );
+  
+  
 
   camara = new THREE.PerspectiveCamera();
   camara.position.z = 10;
