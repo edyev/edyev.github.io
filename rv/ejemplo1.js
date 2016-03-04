@@ -12,7 +12,7 @@ function Pierna(){
 
 Pierna.prototype = new THREE.Object3D();
 function setup(){
-  var cuerpo = new THREE.Mesh( new THREE.DodecahedronGeometry());
+  var cuerpo = new THREE.Mesh( new THREE.DodecahedronGeometry(5));
   piernaD = new Pierna();
   piernaI = new Pierna();
   cuerpo.position.y = 2;
