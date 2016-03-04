@@ -33,10 +33,10 @@ function setup(){
 
 function loop(){
   requestAnimationFrame( loop );
-  
+  renderer.render(escena, camara);
   malla.rotation.x += 0.01;
   malla.rotation.y += 0.01;
-  renderer.render(escena, camara);
+  
 }
 
 var escena, camara, renderer, malla;
