@@ -12,7 +12,7 @@ function setup(){
   var bodyForm = new THREE.LatheGeometry(points);
   var footForm = new THREE.TorusGeometry(0.25,0.12,16,100);
   
-  var material = new THREE.MeshLambertMaterial( { color: 0xffff00 } );
+  var material = new THREE.MeshNormalMaterial(  );
   
   
   var head  = new THREE.Mesh(headForm,material);
