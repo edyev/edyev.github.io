@@ -1,6 +1,6 @@
 function setup(){
   
-  var headForm = new THREE.TorusKnotGeometry(10, 3, 100, 16 );
+  var headForm = new THREE.TorusKnotGeometry(1, 0.5, 100, 16 );
   var esferaForma = new THREE.SphereGeometry(1);
   var cilindroForma = new THREE.CylinderGeometry(0.5, 0.5, 4);
 
