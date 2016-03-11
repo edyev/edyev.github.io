@@ -4,9 +4,9 @@ function setup(){
   var esferaForma = new THREE.SphereGeometry(1);
   var cilindroForma = new THREE.CylinderGeometry(0.5, 0.5, 4);
 
-  
+  var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
  
-  var head  = new THREE.Mesh(headForm);
+  var head  = new THREE.Mesh(headForm,material);
   var esfera2 = new THREE.Mesh(esferaForma);
   var cilindro = new THREE.Mesh(cilindroForma);
 
