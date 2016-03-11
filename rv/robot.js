@@ -18,10 +18,10 @@ function setup(){
   var leg1 = new THREE.Mesh(legForm);
   var leg2 = new THREE.Mesh(legForm);
 
-  leg1.position.x = .7,
-  leg1.position.y = -1.5,
-  leg2.position.x = -.7,
-  leg2.position.y = -1.5,
+  leg1.position.x = .5,
+  leg1.position.y = -2.5,
+  leg2.position.x = -.5,
+  leg2.position.y = -2.5,
   head.position.y = 3;
 
   var forma = new THREE.Geometry();
