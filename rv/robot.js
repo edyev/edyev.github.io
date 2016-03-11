@@ -31,10 +31,10 @@ function setup(){
   foot2.position.y = -3.55,
   leg1.position.x = .25,
   leg1.position.y = -2.5,
-  leg1.rotation.z = 3.1416/6;
-  leg2.rotation.z = - 3.1416/6;
-  foot1.rotation.z = 3.1416/6;
-  foot2.rotation.z = - 3.1416/6;
+  leg1.rotation.z = -3.1416/6;
+  leg2.rotation.z =  3.1416/6;
+  foot1.rotation.z = -3.1416/6;
+  foot2.rotation.z =  3.1416/6;
   leg2.position.x = -.25,
   leg2.position.y = -2.5,
   head.position.y = 3;
