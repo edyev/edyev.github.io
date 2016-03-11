@@ -10,7 +10,7 @@ function setup(){
   var esfera2 = new THREE.Mesh(esferaForma);
   var cilindro = new THREE.Mesh(cilindroForma);
 
-  esfera1.position.y = 2;
+
   esfera2.position.y = -2;
   head.position.y = 10;
   var forma = new THREE.Geometry();
