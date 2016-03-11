@@ -1,8 +1,8 @@
 function setup(){
   var points = [];
-  puntos.push(new THREE.Vector2(0,2));
-  puntos.push(new THREE.Vector2(0.3,-1));
-  puntos.push(new THREE.Vector2(1.5,-2));
+  points.push(new THREE.Vector2(0,2));
+  points.push(new THREE.Vector2(0.3,-1));
+  points.push(new THREE.Vector2(1.5,-2));
   
   
   var headForm = new THREE.TorusKnotGeometry(0.5, 0.1, 100, 10 );
