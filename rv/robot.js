@@ -8,7 +8,7 @@ function setup(){
   //var headForm = new THREE.TorusKnotGeometry(0.5, 0.1, 100, 10 );
   var headForm = new THREE.DodecahedronGeometry(0.5);
   var esferaForma = new THREE.SphereGeometry(1);
-  var legForm = new THREE.CylinderGeometry(0.1,0.1,0.8);
+  var legForm = new THREE.CylinderGeometry(0.1,0.1,1.2);
   var bodyForm = new THREE.LatheGeometry(points);
   var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
  
@@ -18,9 +18,9 @@ function setup(){
   var leg1 = new THREE.Mesh(legForm);
   var leg2 = new THREE.Mesh(legForm);
 
-  leg1.position.x = 1.8,
+  leg1.position.x = .3,
   leg1.position.y = -1.5,
-  leg2.position.x = -1.8,
+  leg2.position.x = -.3,
   leg2.position.y = -1.5,
   head.position.y = 3;
 
