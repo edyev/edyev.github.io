@@ -6,7 +6,7 @@ function setup(){
   points.push(new THREE.Vector2(0,-1.5));
   
   //var headForm = new THREE.TorusKnotGeometry(0.5, 0.1, 100, 10 );
-  var headForm = new THREE.Dodecahedron(0.5);
+  var headForm = new THREE.DodecahedronGeometry(0.5);
   var esferaForma = new THREE.SphereGeometry(1);
   var legForm = new THREE.CylinderGeometry(0.1,0.1,0.8);
   var bodyForm = new THREE.LatheGeometry(points);
