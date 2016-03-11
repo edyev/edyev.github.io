@@ -17,12 +17,7 @@ function Pierna(){
   //foot2.position.x = -0.15 -0.05 - Math.sin(.2),
   //foot2.position.y = -3.55,
 
- var headForm = new THREE.TorusKnotGeometry(0.5, 0.1, 100, 10 );
-  //var headForm = new THREE.DodecahedronGeometry(0.5);
-  var esferaForma = new THREE.SphereGeometry(1);
-  var legForm = new THREE.CylinderGeometry(0.1,0.1,2);
-  var bodyForm = new THREE.LatheGeometry(points);
-
+ 
 Pierna.prototype = new THREE.Object3D();
 function setup(){
    var points = [];
