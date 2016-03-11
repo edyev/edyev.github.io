@@ -1,8 +1,8 @@
 function setup(){
   var points = [];
   points.push(new THREE.Vector2(0,2));
-  points.push(new THREE.Vector2(0.7,-0.75));
-  points.push(new THREE.Vector2(2.3,-1.5));
+  points.push(new THREE.Vector2(0.7,-0.5));
+  points.push(new THREE.Vector2(2,-1.5));
   points.push(new THREE.Vector2(0,-1.5));
   
   var headForm = new THREE.TorusKnotGeometry(0.5, 0.1, 100, 10 );
@@ -11,18 +11,27 @@ function setup(){
   var legForm = new THREE.CylinderGeometry(0.1,0.1,2);
   var bodyForm = new THREE.LatheGeometry(points);
   var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
- 
+  var footForm = new THREE.TorusGeometry(0.25,0.12,16,100);
+  
+  
   var head  = new THREE.Mesh(headForm,material);
   var esfera2 = new THREE.Mesh(esferaForma);
   var body = new THREE.Mesh(bodyForm, material);
   var leg1 = new THREE.Mesh(legForm);
   var leg2 = new THREE.Mesh(legForm);
-
+  var foot1 = new THREE.Mesh(footForm);
+  foot2 = foot1;
+  
+  foot1.position.x = .5,
+  foot1.position.y = -3.5,
+  foot2.position.x = -0.5,
+  foot2.position.y = -3.5,
   leg1.position.x = .5,
   leg1.position.y = -2.5,
   leg2.position.x = -.5,
   leg2.position.y = -2.5,
   head.position.y = 3;
+  
 
   var forma = new THREE.Geometry();
 
