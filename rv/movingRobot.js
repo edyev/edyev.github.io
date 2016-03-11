@@ -1,7 +1,8 @@
 function Pierna(){
   THREE.Object3D.call(this);
-  this.pierna = new THREE.Mesh( new THREE.CylinderGeometry(0.1,0.1,2) );
-  this.pie = new THREE.Mesh( new THREE.TorusGeometry(0.3,0.05,16,100));
+  
+  this.pierna = new THREE.Mesh( new THREE.CylinderGeometry(0.1,0.1,2),new THREE.MeshNormalMaterial(  ) );
+  this.pie = new THREE.Mesh( new THREE.TorusGeometry(0.3,0.05,16,100),new THREE.MeshNormalMaterial(  ));
   this.pierna.position.y = -1;
   this.pie.rotation.x = 3.1416 / 2;
   this.pie.position.y = -2;
@@ -33,8 +34,8 @@ function setup(){
   cabeza = new THREE.Mesh(new THREE.TorusKnotGeometry(0.5,.1,100,10),material);
   piernaD = new Pierna();
   piernaI = new Pierna();
-  piernaD.position.y = -2.5;
-  piernaI.position.y = -2.5;
+  piernaD.position.y = -1.5;
+  piernaI.position.y = -1.5;
   cabeza.position.y = 3;
   piernaD.position.z = -1;
   piernaI.position.z = 1;
