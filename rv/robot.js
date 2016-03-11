@@ -1,7 +1,11 @@
 function setup(){
   
   var headForm = new THREE.TorusKnowGeometry(10);
+  var esferaForma = new THREE.SphereGeometry(1);
+  var cilindroForma = new THREE.CylinderGeometry(0.5, 0.5, 4);
+
   
+ 
   var head  = new THREE.Mesh(headForm);
   var esfera2 = new THREE.Mesh(esferaForma);
   var cilindro = new THREE.Mesh(cilindroForma);
