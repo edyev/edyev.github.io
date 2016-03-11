@@ -34,7 +34,8 @@ function setup(){
   
 
   var forma = new THREE.Geometry();
-
+  THREE.GeometryUtils.merge(forma,foot1);
+  THREE.GeometryUtils.merge(forma, foot2);
   THREE.GeometryUtils.merge(forma, head);
   THREE.GeometryUtils.merge(forma, leg1);
   THREE.GeometryUtils.merge(forma, leg2);
