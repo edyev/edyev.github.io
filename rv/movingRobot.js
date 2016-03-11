@@ -2,7 +2,7 @@ function Pierna(){
   THREE.Object3D.call(this);
   this.pierna = new THREE.Mesh( new THREE.CylinderGeometry(0.1,0.1,2) );
   this.pie = new THREE.Mesh( new THREE.TorusGeometry(0.3,0.05,16,100));
-  pie.rotation.x = 3.1416 / 2;
+  this.pie.rotation.x = 3.1416 / 2;
   this.add(this.pierna);
   this.add(this.pie);
   
