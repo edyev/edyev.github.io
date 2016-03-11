@@ -23,16 +23,16 @@ function setup(){
   var foot1 = new THREE.Mesh(footForm);
   var foot2 = new THREE.Mesh(footForm);
   
-  foot1.position.x = .25,
+  foot1.position.x = 0.2 + Math.cos(.2),
   foot1.position.y = -3.55,
   foot1.rotation.x = 3.1416/2;
   foot2.rotation.x = 3.1416/2;
-  foot2.position.x = -0.25,
+  foot2.position.x = -0.2 - Math.cos(.2),
   foot2.position.y = -3.55,
   leg1.position.x = .25,
   leg1.position.y = -2.5,
-  leg1.rotation.z = Math.asin(0.25);
-  leg2.rotation.z = -Math.asin(0.25);
+  leg1.rotation.z = Math.asin(0.2);
+  leg2.rotation.z = -Math.asin(0.2);
   
   leg2.position.x = -.25,
   leg2.position.y = -2.5,
