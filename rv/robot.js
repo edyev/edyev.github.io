@@ -1,6 +1,6 @@
 function setup(){
   
-  var headForm = new THREE.TorusKnotGeometry(1, 0.5, 100, 16 );
+  var headForm = new THREE.TorusKnotGeometry(1, 0.1, 100, 16 );
   var esferaForma = new THREE.SphereGeometry(1);
   var cilindroForma = new THREE.CylinderGeometry(0.5, 0.5, 4);
 
@@ -12,7 +12,7 @@ function setup(){
 
 
   esfera2.position.y = -2;
-  head.position.y = 10;
+  head.position.y = 4;
   var forma = new THREE.Geometry();
 
   THREE.GeometryUtils.merge(forma, head);
