@@ -1,9 +1,9 @@
 function setup(){
   var points = [];
   points.push(new THREE.Vector2(0,2));
-  points.push(new THREE.Vector2(0.3,-1));
+  points.push(new THREE.Vector2(0.7,-0.75));
   points.push(new THREE.Vector2(1.5,-2));
-  
+   points.push(new THREE.Vector2(0,-2));
   
   var headForm = new THREE.TorusKnotGeometry(0.5, 0.1, 100, 10 );
   var esferaForma = new THREE.SphereGeometry(1);
