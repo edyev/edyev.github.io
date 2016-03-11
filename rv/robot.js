@@ -25,6 +25,8 @@ function setup(){
   
   foot1.position.x = .5,
   foot1.position.y = -3.5,
+  foot1.rotation.x = 3.1416/2;
+  foot2.rotation.x = 3.1416/2;
   foot2.position.x = -0.5,
   foot2.position.y = -3.5,
   leg1.position.x = .5,
@@ -60,7 +62,7 @@ function setup(){
 function loop(){
   requestAnimationFrame( loop );
   renderer.render(escena, camara);
-  malla.rotation.x += 0.01;
+  
   malla.rotation.y += 0.01;
   
 }
