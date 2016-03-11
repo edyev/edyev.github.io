@@ -23,11 +23,11 @@ function setup(){
   var foot1 = new THREE.Mesh(footForm);
   var foot2 = new THREE.Mesh(footForm);
   
-  foot1.position.x = 0.05 + Math.sin(.2),
+  foot1.position.x = 0.15 + 0.05 + Math.sin(.2),
   foot1.position.y = -3.55,
   foot1.rotation.x = 3.1416/2;
   foot2.rotation.x = 3.1416/2;
-  foot2.position.x = -0.05 - Math.sin(.2),
+  foot2.position.x = -0.15 -0.05 - Math.sin(.2),
   foot2.position.y = -3.55,
   leg1.position.x = .25,
   leg1.position.y = -2.5,
