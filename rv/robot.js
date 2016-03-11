@@ -10,8 +10,9 @@ function setup(){
   var esferaForma = new THREE.SphereGeometry(1);
   var legForm = new THREE.CylinderGeometry(0.1,0.1,2);
   var bodyForm = new THREE.LatheGeometry(points);
-  var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
   var footForm = new THREE.TorusGeometry(0.25,0.12,16,100);
+  
+  var material = new THREE.MeshLambertMaterial( { color: 0xffff00 } );
   
   
   var head  = new THREE.Mesh(headForm,material);
@@ -20,7 +21,7 @@ function setup(){
   var leg1 = new THREE.Mesh(legForm);
   var leg2 = new THREE.Mesh(legForm);
   var foot1 = new THREE.Mesh(footForm);
-  foot2 = foot1;
+  var foot2 = foot1;
   
   foot1.position.x = .5,
   foot1.position.y = -3.5,
