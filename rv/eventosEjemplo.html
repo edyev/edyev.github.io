@@ -28,6 +28,7 @@
 	  escena.add(malla);
 	  
 	  //Manejo de eventos
+	  var tipo_evento = 'resize';
 	  var listener = function(){
 	    camara.aspect = window.innerWidth / window.innerHeight;
 	    camara.updateProjectionMatrix();
