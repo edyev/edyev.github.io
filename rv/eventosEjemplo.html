@@ -23,7 +23,7 @@
 	  document.body.appendChild(renderer.domElement);
 	        // Escena
 	  var material = new THREE.MeshNormalMaterial();
-	  var forma = new THREE.SphereGeometry();
+	  var forma = new THREE.SphereGeometry(1);
 	  var malla = new THREE.Mesh(forma, material);
 	  escena.add(malla);
 	  
