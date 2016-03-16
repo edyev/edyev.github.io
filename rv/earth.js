@@ -5,6 +5,8 @@ function setup(){
   var forma = new THREE.SphereGeometry(1.5,32,32);
   malla = new THREE.Mesh(forma, material);
   malla.rotation.z += 0.25;
+  malla.rotation.x += 0.25;
+  
   escena = new THREE.Scene();
   escena.add(malla);
   
