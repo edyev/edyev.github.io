@@ -1,8 +1,8 @@
 function Pierna(){
   THREE.Object3D.call(this);
   
-  this.pierna = new THREE.Mesh( new THREE.CylinderGeometry(0.1,0.1,2),new THREE.MeshPhongMaterial(0x9900FF));
-  this.pie = new THREE.Mesh( new THREE.TorusGeometry(0.3,0.05,16,100),new THREE.MeshPhongMaterial(0x9900FF));
+  this.pierna = new THREE.Mesh( new THREE.CylinderGeometry(0.1,0.1,2),new THREE.MeshBasicMaterial(new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture('./texture.jpg')}));
+  this.pie = new THREE.Mesh( new THREE.TorusGeometry(0.3,0.05,16,100),new THREE.MeshBasicMaterial(new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('./texture.jpg')}));
   this.pierna.position.y = -1;
   this.pie.rotation.x = 3.1416 / 2;
   this.pie.position.y = -2;
