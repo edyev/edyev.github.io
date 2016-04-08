@@ -26,7 +26,7 @@ Pierna.prototype = new THREE.Object3D();
 function setup(){
 
   THREE.ImageUtils.crossOrigin = '';
-  var textura = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/crate.gif');
+  var textura = THREE.ImageUtils.loadTexture('/texture.jpg');
   var material = new THREE.MeshBasicMaterial({map: textura});
   
    var points = [];
