@@ -34,7 +34,7 @@ function setup(){
   points.push(new THREE.Vector2(0.7,-0.5));
   points.push(new THREE.Vector2(2,-1.5));
   points.push(new THREE.Vector2(0,-1.5));
-  cuerpo = new THREE.Mesh( new THREE.LatheGeometry(points),material);
+  cuerpo = new THREE.Mesh( new THREE.LatheGeometry(points),new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture('./body.jpg')}));
   cabeza = new THREE.Mesh(new THREE.TorusKnotGeometry(0.5,.1,100,10),material);
   piernaD = new Pierna();
   piernaI = new Pierna();
