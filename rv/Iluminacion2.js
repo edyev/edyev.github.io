@@ -6,8 +6,8 @@ malla = new THREE.Mesh(new THREE.SphereGeometry(1),
 malla.position.x += 2;
 malla.position.y += 0.25;
 var base = new THREE.Mesh(new THREE.BoxGeometry(5,0.1,5),
-                          new THREE.MeshLambertMaterial({color:0x00ff00}));
-var iluminacion = new THREE.AmbientLight(0xffffff);
+                          new THREE.MeshLambertMaterial({color:0x00FF00}));
+var iluminacion = new THREE.AmbientLight(0xFFFFFF);
 escena = new THREE.Scene();
 escena.add(malla);
 escena.add(base);
@@ -17,7 +17,7 @@ camara.position.z = 15;
 camara.position.y = 5;
 
 renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerHeight*.95, window.innerHeight*.95);
+renderer.setSize( window.innerHeight*0.95, window.innerHeight*0.95);
 document.body.appendChild( renderer.domElement);
 
 renderer.shadowMapEnabled = true;
