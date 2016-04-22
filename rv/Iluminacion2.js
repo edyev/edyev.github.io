@@ -2,16 +2,18 @@ function setup(){
 THREE.ImageUtils.crossOrigin = '';
 var textura = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/planets/earth_atmos_2048.jpg');
 malla = new THREE.Mesh(new THREE.SphereGeometry(1),
-                       new THREE.MeshPhongMaterial({map:textura}));
+                       new THREE.MeshPhongMaterial({color:0xfffffff}));
 malla.position.x += 2;
 malla.position.y += 0.25;
 var base = new THREE.Mesh(new THREE.BoxGeometry(5,0.1,5),
                           new THREE.MeshLambertMaterial({color:0x00FF00}));
-var iluminacion = new THREE.AmbientLight(0xFFFFFF);
+var iluminacion = new THREE.PointLight(0xFFFFFF);
+iluminacion.position.y = 20;
 escena = new THREE.Scene();
 escena.add(malla);
 escena.add(base);
 escena.add(iluminacion);
+
 camara = new THREE.PerspectiveCamera();
 camara.position.z = 15;
 camara.position.y = 5;
