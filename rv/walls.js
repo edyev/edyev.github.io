@@ -1,13 +1,28 @@
+function Wall(){
+  THREE.Object3D.call(this);
+  this.wall = new THREE.Mesh(new THREE.BoxGeometry(10,5,0.2),
+                       new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('./walls.jpg')}));
+  this.add(this.wall);
+}
+
+
+Wall.prototype = new THREE.Object3D();
 function setup(){
-var textura = THREE.ImageUtils.loadTexture('./walls.jpg');
-malla = new THREE.Mesh(new THREE.BoxGeometry(10,5,0.2),
-                       new THREE.MeshBasicMaterial({map:textura}));
-malla.position.y += 2;
-malla.position.z += 0.25;
+THREE.ImageUtils.crossOrigin = '';
+wall1 = new Wall();
+wall2 = new Wall();
+wall3 = new Wall();
+
+
+
 var iluminacion = new THREE.PointLight(0xFFFFFF);
 iluminacion.position.y = 7;
 escena = new THREE.Scene();
-escena.add(malla);
+escena.add(wall1);
+escena.add(wall2);
+escena.add(wall3);
+
+wall1.position.z = 2;
 escena.add(iluminacion);
 
 camara = new THREE.PerspectiveCamera();
@@ -19,7 +34,7 @@ renderer.setSize( window.innerHeight*0.95, window.innerHeight*0.95);
 document.body.appendChild( renderer.domElement);
 
 renderer.shadowMapEnabled = true;
-malla.castShadow = true;
+wall1.castShadow = true;
 iluminacion.castShadow = true;
 
 }
@@ -32,6 +47,6 @@ requestAnimationFrame(loop);
 renderer.render(escena, camara);
 }
 
-var camara, escena, renderer, malla;
+var camara, escena, renderer,wall1,wall2,wall3;
 setup();
 loop();
