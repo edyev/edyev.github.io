@@ -9,6 +9,7 @@ function Wall(){
 Wall.prototype = new THREE.Object3D();
 function setup(){
 THREE.ImageUtils.crossOrigin = '';
+robot = new THREE.Mesh(new THREE.SphereGeometry(.8,30,30), new THREE.MeshBasicMaterial());
 wall1 = new Wall();
 wall2 = new Wall();
 wall3 = new Wall();
@@ -29,6 +30,9 @@ escena.add(wall1);
 escena.add(wall2);
 escena.add(wall3);
 escena.add(wall4);
+escena.add(robot);
+
+
 
 escena.add(iluminacion);
 
@@ -36,24 +40,32 @@ camara = new THREE.PerspectiveCamera();
 camara.position.z = 0;
 camara.position.y = 30;
 camara.rotation.x = -3.1416 / 2 + 0.02;
+raycaster = new THREE.Raycaster();
+raycaster.setFromCamera(new THREE.Vector2(0,0),camara);
 renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerHeight*0.95, window.innerHeight*0.95);
+
 document.body.appendChild( renderer.domElement);
 
 renderer.shadowMapEnabled = true;
 wall1.castShadow = true;
+robot.castShadow = true;
 iluminacion.castShadow = true;
-
+stepx = 0.1;
+stepz = stepx;
 }
 
 function loop(){
 requestAnimationFrame(loop);
-
+var intersects=raycaster.intersectObjects(escena.children);
+if (intersects.length > 0) stepz = -stepz;
+robot.position.x += stepx;
+robot.position.z += stepz;
 
 
 renderer.render(escena, camara);
 }
 
-var camara, escena, renderer,wall1,wall2,wall3,wall4;
+var camara, escena, renderer,wall1,wall2,wall3,wall4,raycaster,robot,stepx,stepz;
 setup();
 loop();
