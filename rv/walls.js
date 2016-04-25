@@ -12,6 +12,11 @@ THREE.ImageUtils.crossOrigin = '';
 wall1 = new Wall();
 wall2 = new Wall();
 wall3 = new Wall();
+wall4 = new Wall();
+
+wall1.position.z = 5;
+wall2.rotation.y = 3.1416 / 2;
+wall2.position.x = 5;
 
 
 
@@ -21,8 +26,8 @@ escena = new THREE.Scene();
 escena.add(wall1);
 escena.add(wall2);
 escena.add(wall3);
+escena.add(wall4);
 
-wall1.position.z = 2;
 escena.add(iluminacion);
 
 camara = new THREE.PerspectiveCamera();
@@ -47,6 +52,6 @@ requestAnimationFrame(loop);
 renderer.render(escena, camara);
 }
 
-var camara, escena, renderer,wall1,wall2,wall3;
+var camara, escena, renderer,wall1,wall2,wall3,wall4;
 setup();
 loop();
