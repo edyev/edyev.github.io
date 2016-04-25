@@ -1,7 +1,7 @@
 function Pierna(){
   THREE.Object3D.call(this);
   
-  this.pierna = new THREE.Mesh( new THREE.CylinderGeometry(0.1,0.1,2),new THREE.MeshLambertMaterial({color:0x9900FF}));
+  this.pierna = new THREE.Mesh( new THREE.CylinderGeometry(0.1,0.1,2),new THREE.MeshLambertMaterial({color:0x00AA00}));
   this.pie = new THREE.Mesh( new THREE.TorusGeometry(0.3,0.05,16,100),new THREE.MeshLambertMaterial({color:0x9900FF}));
   this.pierna.position.y = -1;
   this.pie.rotation.x = 3.1416 / 2;
