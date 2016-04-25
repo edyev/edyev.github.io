@@ -3,8 +3,8 @@ THREE.ImageUtils.crossOrigin = '';
 var textura = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/planets/earth_atmos_2048.jpg');
 malla = new THREE.Mesh(new THREE.SphereGeometry(1),
                        new THREE.MeshPhongMaterial({color:0xfffffff}));
-malla.position.x += 2;
-malla.position.y += 0.25;
+malla.position.y += 2;
+malla.position.z += 0.25;
 var base = new THREE.Mesh(new THREE.BoxGeometry(5,0.1,5),
                           new THREE.MeshLambertMaterial({color:0x00FF00}));
 var iluminacion = new THREE.PointLight(0xFFFFFF);
