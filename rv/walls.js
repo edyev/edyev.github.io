@@ -27,6 +27,8 @@ iluminacion.castShadow = true;
 
 function loop(){
 requestAnimationFrame(loop);
+malla.rotation.x += 0.1;
+malla.rotation.y += 0.1;
 
 renderer.render(escena, camara);
 }
