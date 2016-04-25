@@ -1,6 +1,6 @@
 function setup(){
 var textura = THREE.ImageUtils.loadTexture('./walls.jpg');
-malla = new THREE.Mesh(new THREE.BoxGeometry(0.1,0.2,5),
+malla = new THREE.Mesh(new THREE.BoxGeometry(10,0.2,5),
                        new THREE.MeshBasicMaterial({map:textura}));
 malla.position.y += 2;
 malla.position.z += 0.25;
