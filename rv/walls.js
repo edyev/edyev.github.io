@@ -41,7 +41,7 @@ camara.position.z = 0;
 camara.position.y = 30;
 camara.rotation.x = -3.1416 / 2 + 0.02;
 raycaster = new THREE.Raycaster();
-raycaster.setFromCamera(new THREE.Vector2(robot.position.x,robotposition.z),camara);
+raycaster.setFromCamera(new THREE.Vector2(robot.position.x,robot.position.z),camara);
 renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerHeight*0.95, window.innerHeight*0.95);
 
