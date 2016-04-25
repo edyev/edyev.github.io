@@ -1,6 +1,6 @@
 function Wall(){
   THREE.Object3D.call(this);
-  this.wall = new THREE.Mesh(new THREE.BoxGeometry(20,5,0.2),
+  this.wall = new THREE.Mesh(new THREE.BoxGeometry(20,5,0.5),
                        new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('./walls.jpg')}));
   this.add(this.wall);
 }
