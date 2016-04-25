@@ -13,7 +13,7 @@ escena.add(iluminacion);
 camara = new THREE.PerspectiveCamera();
 camara.position.z = 15;
 camara.position.y = 5;
-camara.rotation.x = 0.1;
+camara.rotation.x = -0.1;
 renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerHeight*0.95, window.innerHeight*0.95);
 document.body.appendChild( renderer.domElement);
