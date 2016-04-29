@@ -29,7 +29,7 @@ wall2.position.x = 10;
 wall3.rotation.y = 3.1416 / 2;
 wall3.position.x = -10;
 wall4.position.z = 10;
-robot.position.y = 5;
+robot.position.y = 1.5;
 
 var iluminacion = new THREE.PointLight(0xFFFFFF);
 iluminacion.position.y = 7;
