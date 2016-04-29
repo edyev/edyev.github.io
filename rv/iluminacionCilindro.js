@@ -17,7 +17,7 @@ wall2 = new Wall();
 wall3 = new Wall();
 wall4 = new Wall();
 floor = new THREE.Mesh(new THREE.BoxGeometry(20,20,0.25),
-                       new THREE.MeshBasicMaterial());
+                       new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('./floor.jpg')}));
 
 
 cyl.position.y = 7;
@@ -40,7 +40,7 @@ escena.add(wall2);
 escena.add(wall3);
 escena.add(wall4);
 escena.add(robot, cyl);
-
+escena.add(iluminacion);
 
 
 
