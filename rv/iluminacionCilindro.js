@@ -16,8 +16,13 @@ wall1 = new Wall();
 wall2 = new Wall();
 wall3 = new Wall();
 wall4 = new Wall();
+floor = new THREE.Mesh(new THREE.BoxGeometry(20,20,0.25),
+                       new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('./floor.jpg')}));
+
 
 cyl.position.y = 7;
+floor.rotation.x = 3.1416 / 2;
+
 wall1.position.z = -10;
 wall2.rotation.y = 3.1416 / 2;
 wall2.position.x = 10;
@@ -29,6 +34,7 @@ wall4.position.z = 10;
 var iluminacion = new THREE.PointLight(0xFFFFFF);
 iluminacion.position.y = 7;
 escena = new THREE.Scene();
+escena.add(floor);
 escena.add(wall1);
 escena.add(wall2);
 escena.add(wall3);
@@ -43,7 +49,7 @@ escena.add(iluminacion);
 camara = new THREE.PerspectiveCamera();
 camara.position.z = 0;
 camara.position.y = 30;
-camara.rotation.x = -3.1416 / 6 + 0.02;
+camara.rotation.x = -3.1416 / 2 + 0.02;
 raycaster = new THREE.Raycaster();
 raycaster.setFromCamera(new THREE.Vector2(robot.position.x,robot.position.z),camara);
 renderer = new THREE.WebGLRenderer();
