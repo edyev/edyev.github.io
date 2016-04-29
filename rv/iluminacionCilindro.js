@@ -10,7 +10,7 @@ Wall.prototype = new THREE.Object3D();
 function setup(){
 THREE.ImageUtils.crossOrigin = '';
 robot = new THREE.Mesh(new THREE.SphereGeometry(.8,30,30), new THREE.MeshBasicMaterial());
-cyl = new THREE.Mesh(new THREE.CylinderGeometry(3,3,5,30), new THREE.MeshBasicMaterial());
+cyl = new THREE.Mesh(new THREE.CylinderGeometry(1,2,2,30), new THREE.MeshBasicMaterial());
 
 wall1 = new Wall();
 wall2 = new Wall();
@@ -69,8 +69,6 @@ function loop(){
 requestAnimationFrame(loop);
 var intersects=raycaster.intersectObjects(escena.children);
 if (intersects.length > 0) stepz = -stepz;
-robot.position.x += stepx;
-robot.position.z += stepz;
 
 
 renderer.render(escena, camara);
