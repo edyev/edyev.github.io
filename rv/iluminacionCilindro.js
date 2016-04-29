@@ -47,9 +47,9 @@ escena.add(robot, cyl);
 escena.add(iluminacion);
 
 camara = new THREE.PerspectiveCamera();
-camara.position.z = 35;
+camara.position.z = 40;
 camara.position.y = 30;
-camara.rotation.x = -3.1416 / 3 ;
+camara.rotation.x = -3.1416 / 4 ;
 raycaster = new THREE.Raycaster();
 raycaster.setFromCamera(new THREE.Vector2(robot.position.x,robot.position.z),camara);
 renderer = new THREE.WebGLRenderer();
@@ -59,8 +59,13 @@ document.body.appendChild( renderer.domElement);
 
 renderer.shadowMapEnabled = true;
 wall1.castShadow = true;
+wall2.castShadow = true;
+wall3.castShadow = true;
+wall4.castShadow = true;
 robot.castShadow = true;
+floor.castShadow = true;
 iluminacion.castShadow = true;
+
 stepx = 0.1;
 stepz = stepx;
 }
