@@ -17,7 +17,7 @@ wall2 = new Wall();
 wall3 = new Wall();
 wall4 = new Wall();
 floor = new THREE.Mesh(new THREE.BoxGeometry(20,20,0.25),
-                       new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('./floor.jpg')}));
+                       new THREE.MeshBasicMaterial());
 
 
 cyl.position.y = 7;
@@ -49,7 +49,7 @@ escena.add(iluminacion);
 camara = new THREE.PerspectiveCamera();
 camara.position.z = 40;
 camara.position.y = 30;
-camara.rotation.x = -3.1416 / 6 ;
+camara.rotation.x = -3.1416 / 6 -0.2;
 raycaster = new THREE.Raycaster();
 raycaster.setFromCamera(new THREE.Vector2(robot.position.x,robot.position.z),camara);
 renderer = new THREE.WebGLRenderer();
