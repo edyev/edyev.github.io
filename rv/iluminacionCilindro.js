@@ -47,9 +47,9 @@ escena.add(robot, cyl);
 escena.add(iluminacion);
 
 camara = new THREE.PerspectiveCamera();
-camara.position.z = 0;
+camara.position.z = 30;
 camara.position.y = 30;
-camara.rotation.x = -3.1416 / 2 + 0.02;
+camara.rotation.x = -3.1416 / 6 ;
 raycaster = new THREE.Raycaster();
 raycaster.setFromCamera(new THREE.Vector2(robot.position.x,robot.position.z),camara);
 renderer = new THREE.WebGLRenderer();
