@@ -1,7 +1,7 @@
 function Wall(){
   THREE.Object3D.call(this);
-  this.wall = new THREE.Mesh(new THREE.BoxGeometry(20,5,0.5),
-                       new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('./walls.jpg')}));
+  this.wall = new THREE.Mesh(new THREE.BoxGeometry(20,10,0.5),
+                       new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('./floor.jpg')}));
   this.add(this.wall);
 }
 
@@ -47,7 +47,7 @@ escena.add(robot, cyl);
 escena.add(iluminacion);
 
 camara = new THREE.PerspectiveCamera();
-camara.position.z = 30;
+camara.position.z = 40;
 camara.position.y = 30;
 camara.rotation.x = -3.1416 / 6 ;
 raycaster = new THREE.Raycaster();
