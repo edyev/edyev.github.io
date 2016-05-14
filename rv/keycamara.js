@@ -21,7 +21,7 @@ function setup(){
 	  
 	  function dealWithKey(e){
 	       if (e.keyCode == "80") {
-            	camOption = ~ camOption;
+            	camOption = ! camOption;
         }
         	if(camOption){
         		camara.toPerspective();
