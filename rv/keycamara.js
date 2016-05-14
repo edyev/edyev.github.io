@@ -11,7 +11,7 @@ function setup(){
 	  renderer.setSize(window.innerWidth, window.innerHeight);
 	  document.body.appendChild(renderer.domElement);
 	        // Escena
-	  var material = new THREE.MeshPhongMaterial({color:0x0ca0ca});
+	  var material = new THREE.MeshPhongMaterial({color:0x156289});
 	  var forma = new THREE.DodecahedronGeometry(10,0);
 	  malla = new THREE.Mesh(forma, material);
 	  escena.add(malla);
