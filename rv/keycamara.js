@@ -1,7 +1,7 @@
 function setup(){
  escena = new THREE.Scene();
  aspect = window.innerWidth/window.innerHeight;
- camara = new THREE.CominedbCamera(75,
+ camara = new THREE.CombinedbCamera(75,
 	                                       aspect,
 	                                       0.1,
 	                                       1000); 
