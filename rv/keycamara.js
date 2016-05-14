@@ -21,8 +21,15 @@ function setup(){
 	  
 	  function dealWithKey(e){
 	       if (e.keyCode == "80") {
-            malla.rotation.x += 10;
+            	camOption = ~ camOption;
         }
+        	if(camOption){
+        		camara.toPerspective();
+        	}
+        	else{
+        		camara.toOrthographic();	
+        	}
+      
 	   }
 	  
 	 
@@ -33,6 +40,7 @@ function setup(){
 	    malla.rotation.y += 0.01;
 	    renderer.render(escena, camara);
 	  }
-var malla, escena, renderer,aspect;
+var malla, escena, renderer,aspect,camara;
+var camOption = false;
 setup(); 
 loop();
