@@ -14,7 +14,7 @@ function setup(){
 	  var material = new THREE.MeshBasicMaterial();
 	  var forma = new THREE.DodecahedronGeometry(10,0);
 	 // var forma = new THREE.BoxGeometry(10,10,10,10);
-	 malla = new THREE.Mesh(forma, new THREE.MeshLambertMaterial({color:0xca00c}));
+	 malla = new THREE.Mesh(forma, new THREE.MeshLambertMaterial({color:0x129309}));
 	 
 	  escena.add(malla);
 	  }
