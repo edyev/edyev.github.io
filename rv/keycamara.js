@@ -47,8 +47,8 @@ function setup(){
 	  window.addEventListener('keydown', dealWithKey, false);
 	  function loop(){
 	    requestAnimationFrame (loop);
-	    malla.rotation.x += 0.1;
-	    malla.rotation.y += 0.1;
+	    malla.rotation.x += 0.01;
+	    malla.rotation.y += 0.01;
 	    
 	    renderer.render(escena, camara);
 	  }
