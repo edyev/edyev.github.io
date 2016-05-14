@@ -33,7 +33,7 @@ function setup(){
 	                                       1000); 
  //camara = new THREE.CombinedCamera( window.innerWidth / 2, window.innerHeight / 2, 70, 1, 1000, - 500, 1000 );
 	          //Inicializacion                               
-	  camara.position.z = 5;
+
         	}
         	else{
         		 camara = new THREE.OrthographicCamera(75,
@@ -42,7 +42,7 @@ function setup(){
 	                                       1000); 	
         	}
         	camara.position.z = 20;
-	  camara.position.y = 20;
+
       
 	   }
 	  
