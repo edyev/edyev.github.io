@@ -4,7 +4,7 @@ function setup(){
  
  camara = new THREE.CombinedCamera( window.innerWidth / 2, window.innerHeight / 2, 70, 1, 1000, - 500, 1000 );
 	          //Inicializacion                               
-	  camara.position.z = 10;
+	  camara.position.z = 20;
 	  camara.position.y = 5;
 	  camara.rotation.x = 3.1416/24; 
 	  renderer = new THREE.WebGLRenderer();
