@@ -6,6 +6,7 @@ function setup(){
 	          //Inicializacion                               
 	  camara.position.z = 20;
 	  camara.position.y = 5;
+	  camara.rotation.x = 3.1416/12; 
 	  renderer = new THREE.WebGLRenderer();
 	  renderer.setSize(window.innerWidth, window.innerHeight);
 	  document.body.appendChild(renderer.domElement);
