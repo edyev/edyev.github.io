@@ -41,7 +41,7 @@ function setup(){
         	}
         	//
 			//	camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 500, 1000 );
-        	camara.position.z = 20;
+        	
 
       
 	   }
