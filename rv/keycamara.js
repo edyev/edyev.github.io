@@ -4,15 +4,15 @@ function setup(){
  
  camara = new THREE.CombinedCamera( window.innerWidth / 2, window.innerHeight / 2, 70, 1, 1000, - 500, 1000 );
 	          //Inicializacion                               
-	  camara.position.z = 20;
+	  camara.position.z = 10;
 	  camara.position.y = 5;
-	  camara.rotation.x = 3.1416/12; 
+	  camara.rotation.x = 3.1416/24; 
 	  renderer = new THREE.WebGLRenderer();
 	  renderer.setSize(window.innerWidth, window.innerHeight);
 	  document.body.appendChild(renderer.domElement);
 	        // Escena
-	  var material = new THREE.MeshNormalMaterial({color:0x0ca0ca});
-	  var forma = new THREE.BoxGeometry(10,10,10,10);
+	  var material = new THREE.MeshPhongMaterial({color:0x0ca0ca});
+	  var forma = new THREE.DodecahedronGeometry(10,0);
 	  malla = new THREE.Mesh(forma, material);
 	  escena.add(malla);
 	  }
@@ -45,7 +45,9 @@ function setup(){
 	  window.addEventListener('keydown', dealWithKey, false);
 	  function loop(){
 	    requestAnimationFrame (loop);
-	
+	    malla.rotation.x += 0.1;
+	    malla.rotation.y += 0.1;
+	    
 	    renderer.render(escena, camara);
 	  }
 var malla, escena, renderer,aspect,camara;
