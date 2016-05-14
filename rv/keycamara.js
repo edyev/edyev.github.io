@@ -23,7 +23,7 @@ function setup(){
 	  
 	  function dealWithKey(e){
 	       if (e.keyCode == "80") {
-	       	malla.rotation.y += 20;
+	      
             	camOption = - camOption;
         }
         	if(camOption < 0){
@@ -50,8 +50,7 @@ function setup(){
 	  window.addEventListener('keydown', dealWithKey, false);
 	  function loop(){
 	    requestAnimationFrame (loop);
-	    malla.rotation.x += 0.01;
-	    malla.rotation.y += 0.01;
+	
 	    renderer.render(escena, camara);
 	  }
 var malla, escena, renderer,aspect,camara;
