@@ -13,8 +13,8 @@ function setup(){
 	  renderer.setSize(window.innerWidth, window.innerHeight);
 	  document.body.appendChild(renderer.domElement);
 	        // Escena
-	  var material = new THREE.MeshNormalMaterial();
-	  var forma = new THREE.SphereGeometry(10);
+	  var material = new THREE.MeshNormalMaterial({color:0x0ca0ca});
+	  var forma = new THREE.BoxGeometry(10,10,10,10);
 	  malla = new THREE.Mesh(forma, material);
 	  escena.add(malla);
 	  }
