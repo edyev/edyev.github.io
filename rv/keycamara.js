@@ -14,7 +14,7 @@ function setup(){
 	  document.body.appendChild(renderer.domElement);
 	        // Escena
 	  var material = new THREE.MeshNormalMaterial();
-	  var forma = new THREE.SphereGeometry(1);
+	  var forma = new THREE.SphereGeometry(10);
 	  malla = new THREE.Mesh(forma, material);
 	  escena.add(malla);
 	  }
@@ -36,7 +36,7 @@ function setup(){
 
         	}
         	else{
-        		 camara = new THREE.OrthographicCamera(1000*aspect /- 2,1000*aspect / 2, -1000/2, 1000/2, 0.1, 1000 );
+        		 camara = new THREE.OrthographicCamera(500*aspect /- 2,500*aspect / 2, -500/2, 500/2, 0.1, 1000 );
         	
         	}
         	//
