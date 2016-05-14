@@ -36,10 +36,8 @@ function setup(){
 
         	}
         	else{
-        		 camara = new THREE.OrthographicCamera(75,
-	                                       aspect,
-	                                       -500,
-	                                       1000); 	
+        		 camara = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 500, 1000 );
+        	
         	}
         	//
 			//	camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 500, 1000 );
