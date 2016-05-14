@@ -1,10 +1,10 @@
 function setup(){
  escena = new THREE.Scene();
  aspect = window.innerWidth/window.innerHeight;
- camara = new THREE.PerspectiveCamera(75,
+ camara = new THREE.CominedbCamera(75,
 	                                       aspect,
 	                                       0.1,
-	                                       1000);
+	                                       1000); 
 	          //Inicializacion                               
 	  camara.position.z = 5;
 	  renderer = new THREE.WebGLRenderer();
@@ -21,9 +21,10 @@ function setup(){
 	  
 	  function dealWithKey(e){
 	       if (e.keyCode == "80") {
-            	camOption = ! camOption;
+	       	malla.rotation.y += 20;
+            	camOption = - camOption;
         }
-        	if(camOption){
+        	if(camOption < 0){
         		camara.toPerspective();
         	}
         	else{
@@ -41,6 +42,6 @@ function setup(){
 	    renderer.render(escena, camara);
 	  }
 var malla, escena, renderer,aspect,camara;
-var camOption = false;
+var camOption = 1;
 setup(); 
 loop();
