@@ -24,13 +24,13 @@ function setup(){
             	camOption = - camOption;
         }
         	if(camOption < 0){
-        			camara.ToPerspective();
+        			camara.toPerspective();
  //camara = new THREE.CombinedCamera( window.innerWidth / 2, window.innerHeight / 2, 70, 1, 1000, - 500, 1000 );
 	          //Inicializacion                               
 
         	}
         	else{
-        		camara.ToOrthographic();
+        		camara.toOrthographic();
         	
         	}
         	//
