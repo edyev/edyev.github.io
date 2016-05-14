@@ -1,11 +1,8 @@
 function setup(){
  escena = new THREE.Scene();
  aspect = window.innerWidth/window.innerHeight;
- camara = new THREE.PerspectiveCamera(75,
-	                                       aspect,
-	                                       0.1,
-	                                       1000); 
- //camara = new THREE.CombinedCamera( window.innerWidth / 2, window.innerHeight / 2, 70, 1, 1000, - 500, 1000 );
+ 
+ camara = new THREE.CombinedCamera( window.innerWidth / 2, window.innerHeight / 2, 70, 1, 1000, - 500, 1000 );
 	          //Inicializacion                               
 	  camara.position.z = 20;
 	  camara.position.y = 0;
