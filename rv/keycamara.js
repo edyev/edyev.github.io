@@ -26,10 +26,19 @@ function setup(){
             	camOption = - camOption;
         }
         	if(camOption < 0){
-        		camara.toPerspective();
+        		 camara = new THREE.PerspectiveCamera(75,
+	                                       aspect,
+	                                       0.1,
+	                                       1000); 
+ //camara = new THREE.CombinedCamera( window.innerWidth / 2, window.innerHeight / 2, 70, 1, 1000, - 500, 1000 );
+	          //Inicializacion                               
+	  camara.position.z = 5;
         	}
         	else{
-        		camara.toOrthographic();	
+        		 camara = new THREE.OrthographicCamera(75,
+	                                       aspect,
+	                                       0.1,
+	                                       1000); 	
         	}
       
 	   }
