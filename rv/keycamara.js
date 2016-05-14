@@ -7,7 +7,8 @@ function setup(){
 	                                       1000); 
  //camara = new THREE.CombinedCamera( window.innerWidth / 2, window.innerHeight / 2, 70, 1, 1000, - 500, 1000 );
 	          //Inicializacion                               
-	  camara.position.z = 5;
+	  camara.position.z = 20;
+	  camara.position.y = 20;
 	  renderer = new THREE.WebGLRenderer();
 	  renderer.setSize(window.innerWidth, window.innerHeight);
 	  document.body.appendChild(renderer.domElement);
@@ -40,6 +41,8 @@ function setup(){
 	                                       0.1,
 	                                       1000); 	
         	}
+        	camara.position.z = 20;
+	  camara.position.y = 20;
       
 	   }
 	  
