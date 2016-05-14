@@ -13,7 +13,8 @@ function setup(){
 	        // Escena
 	  var material = new THREE.MeshPhongMaterial({color:0x156289});
 	  var forma = new THREE.DodecahedronGeometry(10,0);
-	  malla = new THREE.Mesh(forma, material);
+	 // malla = new THREE.Mesh(forma, material);
+	 malla = new THREE.BoxGeometry(10,10,10,10);
 	  escena.add(malla);
 	  }
 	  //Manejo de eventos
