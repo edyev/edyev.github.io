@@ -89,12 +89,13 @@ stepz = stepx;
 
 
 function loop(){
+	var originPoint = robot.position.clone();
 requestAnimationFrame(loop);
 for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   var robotVertex = robot.geometry.vertices[i].clone();
   var wallVertex = robotVertex.applyMatrix4( robot.matrix );
   var collisionVector = wallVertex.sub( robot.position);
-  var ray = new THREE.Raycaster( robotVertex, collisionVector.clone().normalize() );
+  var ray = new THREE.Raycaster( originPoint, collisionVector.clone().normalize() );
   var collisions = ray.intersectObjects( collideMatrix );
   
   var line = new THREE.Line( robotVertex );
@@ -108,8 +109,8 @@ for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   
 
 
-//robot.position.x += stepx;
-//robot.position.z += stepz;
+robot.position.x += stepx;
+robot.position.z += stepz;
 
 
 renderer.render(escena, camara);
