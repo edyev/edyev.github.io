@@ -10,7 +10,7 @@ Wall.prototype = new THREE.Object3D();
 function setup(){
 THREE.ImageUtils.crossOrigin = '';
 robot = new THREE.Mesh(new THREE.BoxGeometry(2,2,2), new THREE.MeshBasicMaterial());
-robot.position.set(10,0,0);
+robot.position.set(7.8,0,0);
 
 wall1 = new Wall();
 wall2 = new Wall();
@@ -105,9 +105,7 @@ for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   var collisionVector = wallVertex.sub( robot.position);
   var ray = new THREE.Raycaster( originPoint, collisionVector.clone().normalize() );
   var collisions = ray.intersectObjects( collideMatrix );
-  
-  var line = new THREE.Line( ray );
-  console.log(ray);
+  console.log(collisions);
   if ( collisions.length > 0  && collisions[0].distance < collisionVector.length() ){
     stepz = -stepz;
     console.log(collideMatrix);
