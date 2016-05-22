@@ -103,7 +103,7 @@ for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   }
   
   
-
+print("No collided");
 
 robot.position.x += stepx;
 robot.position.z += stepz;
