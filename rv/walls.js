@@ -30,8 +30,16 @@ collideMatrix.push(wall2);
 collideMatrix.push(wall3);
 collideMatrix.push(wall4);
 
-
-
+wall1 = new Wall();
+wall2 = new Wall();
+wall3 = new Wall();
+wall4 = new Wall();
+wall1.position.z = -10;
+wall2.rotation.y = 3.1416 / 2;
+wall2.position.x = 10;
+wall3.rotation.y = 3.1416 / 2;
+wall3.position.x = -10;
+wall4.position.z = 10;
 
 
 
