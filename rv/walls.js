@@ -96,9 +96,12 @@ for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   var collisionVector = wallVertex.sub( robot.position);
   var ray = new THREE.Raycaster( robotVertex, collisionVector.clone().normalize() );
   var collisions = ray.intersectObjects( collideMatrix );
+  
+  console.log(robotVertex);
   if ( collisions.length > 0  && collisions[0].distance < collisionVector.length() ){
     stepz = -stepz;
   }
+  
   }
   
   
