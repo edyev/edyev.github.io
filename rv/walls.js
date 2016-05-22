@@ -25,6 +25,18 @@ wall3.rotation.y = 3.1416 / 2;
 wall3.position.x = -10;
 wall4.position.z = 10;
 
+collideMatrix.push(wall1);
+collideMatrix.push(wall2);
+collideMatrix.push(wall3);
+collideMatrix.push(wall4);
+
+
+
+
+
+
+
+
 
 var iluminacion = new THREE.PointLight(0xFFFFFF);
 iluminacion.position.y = 7;
@@ -59,10 +71,39 @@ stepx = 0.1;
 stepz = stepx;
 }
 
+/*var originPoint = MovingCube.position.clone();
+
+	clearText();
+	
+	for (var vertexIndex = 0; vertexIndex < MovingCube.geometry.vertices.length; vertexIndex++)
+	{		
+		var localVertex = MovingCube.geometry.vertices[vertexIndex].clone();
+		var globalVertex = localVertex.applyMatrix4( MovingCube.matrix );
+		var directionVector = globalVertex.sub( MovingCube.position );
+		
+		var ray = new THREE.Raycaster( originPoint, directionVector.clone().normalize() );
+		var collisionResults = ray.intersectObjects( collidableMeshList );
+		if ( collisionResults.length > 0 && collisionResults[0].distance < directionVector.length() ) 
+			appendText(" Hit ");
+	}	*/
+
+
 function loop(){
 requestAnimationFrame(loop);
-var intersects=raycaster.intersectObjects(escena.children);
-if (intersects.length > 0) stepz = -stepz;
+for (var i = 0; i < robot.geometry.vertices.length; i++ ){
+  var robotVertex = robot.geometry.vertices[i].clone();
+  var wallVertex = robotVertex.applyMatrix4( robot.matrix );
+  var collisionVector = wallVertex.sub( robot.position);
+  var ray = new THREE.Raycaster( robotVertex, collisionVector.clone().normaliza() );
+  var collisions = ray.intersectsObjects( collisionMatrix );
+  if ( collisions.length > 0  && collisions[0].distance < collisionVector.length() ){
+    stepz = -stepz;
+  }
+  }
+  
+  
+}
+
 robot.position.x += stepx;
 robot.position.z += stepz;
 
@@ -71,5 +112,6 @@ renderer.render(escena, camara);
 }
 
 var camara, escena, renderer,wall1,wall2,wall3,wall4,raycaster,robot,stepx,stepz,cyl;
+var collideMatrix = [];
 setup();
 loop();
