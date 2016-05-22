@@ -107,8 +107,8 @@ for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   
 
 
-robot.position.x += stepx;
-robot.position.z += stepz;
+//robot.position.x += stepx;
+//robot.position.z += stepz;
 
 
 renderer.render(escena, camara);
