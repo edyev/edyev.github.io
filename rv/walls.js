@@ -99,7 +99,7 @@ for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   var collisions = ray.intersectObjects( collideMatrix );
   
   var line = new THREE.Line( ray );
-  console.log(collisionVector);
+  console.log(collideMatrix);
   if ( collisions.length > 0  && collisions[0].distance < collisionVector.length() ){
     stepz = -stepz;
   }
