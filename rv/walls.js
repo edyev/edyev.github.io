@@ -10,7 +10,7 @@ Wall.prototype = new THREE.Object3D();
 function setup(){
 THREE.ImageUtils.crossOrigin = '';
 robot = new THREE.Mesh(new THREE.BoxGeometry(2,2,2), new THREE.MeshBasicMaterial());
-
+robot.position.set(10,0,0);
 
 wall1 = new Wall();
 wall2 = new Wall();
