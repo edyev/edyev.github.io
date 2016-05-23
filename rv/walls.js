@@ -98,6 +98,7 @@ stepz = stepx;
 
 function loop(){
 	var originPoint = robot.position.clone();
+	console.log(originPoint);
 requestAnimationFrame(loop);
 for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   var robotVertex = robot.geometry.vertices[i].clone();
@@ -107,6 +108,7 @@ for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   var collisionVector = wallVertex.sub( robot.position);
   console.log(collisionVector);
   var ray = new THREE.Raycaster( originPoint, collisionVector.clone().normalize() );
+  console.log(ray);
   var collisions = ray.intersectObjects( collideMatrix );
   console.log(collisions);
   if ( collisions.length > 0  && collisions[0].distance < collisionVector.length() ){
