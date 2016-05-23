@@ -108,8 +108,8 @@ for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   console.log(collisionVector);
   var ray = new THREE.Raycaster( originPoint, collisionVector.clone().normalize() );
   //console.log(ray);
-  var collisions = ray.intersectObjects( collideMatrix );
-  console.log(collideMatrix);
+  collisions = ray.intersectObjects( collideMatrix );
+  
   if ( collisions.length > 0  && collisions[0].distance < collisionVector.length() ){
     stepz = -stepz;
     console.log(collideMatrix);
@@ -118,7 +118,7 @@ for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   
   }
   
-  
+  console.log(collideMatrix);
 
 
 //robot.position.x += stepx;
