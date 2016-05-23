@@ -105,7 +105,7 @@ for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   
   console.log(wallVertex);
   var collisionVector = wallVertex.sub( robot.position);
-  //console.log(collisionVector);
+  console.log(collisionVector);
   var ray = new THREE.Raycaster( originPoint, collisionVector.clone().normalize() );
   //console.log(ray);
   var collisions = ray.intersectObjects( collideMatrix );
