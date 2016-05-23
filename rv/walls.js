@@ -10,7 +10,7 @@ Wall.prototype = new THREE.Object3D();
 function setup(){
 THREE.ImageUtils.crossOrigin = '';
 robot = new THREE.Mesh(new THREE.BoxGeometry(2,2,2), new THREE.MeshBasicMaterial());
-robot.position.set(7.8,0,0);
+robot.position.set(8,0,0);
 
 wall1 = new Wall();
 wall2 = new Wall();
@@ -102,13 +102,13 @@ function loop(){
 requestAnimationFrame(loop);
 for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   var robotVertex = robot.geometry.vertices[i].clone();
-  console.log(robotVertex);
+  //console.log(robotVertex);
   var wallVertex = robotVertex.applyMatrix4( robot.matrix );
-  console.log(wallVertex);
+  //console.log(wallVertex);
   var collisionVector = wallVertex.sub( robot.position);
-  console.log(collisionVector);
+  //console.log(collisionVector);
   var ray = new THREE.Raycaster( originPoint, collisionVector.clone().normalize() );
-  console.log(ray);
+  //console.log(ray);
   var collisions = ray.intersectObjects( collideMatrix );
   console.log(collisions);
   if ( collisions.length > 0  && collisions[0].distance < collisionVector.length() ){
