@@ -100,15 +100,10 @@ for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   var robotVertex = robot.geometry.vertices[i].clone();
   //console.log(robotVertex);
   var wallVertex = robotVertex.applyMatrix4( robot.matrix );
-  console.log(robot.matrix);
-  
-  console.log(wallVertex);
   var collisionVector = wallVertex.sub( robot.position);
-  console.log(collisionVector);
   var ray = new THREE.Raycaster( originPoint, collisionVector.clone().normalize() );
-  //console.log(ray);
   collisions = ray.intersectObjects( collideMatrix );
-  
+  console.log(collisions);
   if ( collisions.length > 0  && collisions[0].distance < collisionVector.length() ){
     stepz = -stepz;
     console.log(collideMatrix);
