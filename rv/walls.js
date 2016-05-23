@@ -55,7 +55,11 @@ escena.add(wall3);
 escena.add(wall4);
 escena.add(robot);
 
+console.log(wall1.position);
+console.log(wall2.position);
+console.log(wall3.position);
 
+console.log(wall4.position);
 
 
 escena.add(iluminacion);
