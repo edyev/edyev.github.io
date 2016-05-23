@@ -54,14 +54,6 @@ escena.add(wall2);
 escena.add(wall3);
 escena.add(wall4);
 escena.add(robot);
-
-console.log(wall1.position);
-console.log(wall2.position);
-console.log(wall3.position);
-
-console.log(wall4.position);
-
-
 escena.add(iluminacion);
 
 camara = new THREE.PerspectiveCamera();
@@ -104,9 +96,10 @@ function loop(){
 	var originPoint = robot.position.clone();
 //	console.log(originPoint);
 requestAnimationFrame(loop);
+console.log(robot.geometry.vertices);
 for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   var robotVertex = robot.geometry.vertices[i].clone();
-  //console.log(robotVertex);
+  console.log(robotVertex);
   var wallVertex = robotVertex.applyMatrix4( robot.matrix );
   //console.log(wallVertex);
   var collisionVector = wallVertex.sub( robot.position);
