@@ -99,9 +99,11 @@ requestAnimationFrame(loop);
 console.log(robot.geometry.vertices);
 for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   var robotVertex = robot.geometry.vertices[i].clone();
-  console.log(robotVertex);
+  //console.log(robotVertex);
   var wallVertex = robotVertex.applyMatrix4( robot.matrix );
-  //console.log(wallVertex);
+  console.log(robot.matrix);
+  
+  console.log(wallVertex);
   var collisionVector = wallVertex.sub( robot.position);
   //console.log(collisionVector);
   var ray = new THREE.Raycaster( originPoint, collisionVector.clone().normalize() );
