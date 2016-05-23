@@ -95,7 +95,7 @@ function loop(){
 	var originPoint = robot.position.clone();
 //	console.log(originPoint);
 requestAnimationFrame(loop);
-console.log(robot.geometry.vertices);
+//console.log(robot.geometry.vertices);
 for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   var robotVertex = robot.geometry.vertices[i].clone();
   //console.log(robotVertex);
@@ -113,7 +113,7 @@ for (var i = 0; i < robot.geometry.vertices.length; i++ ){
   
   }
   
-  console.log(collideMatrix);
+  //console.log(collideMatrix);
 
 
 //robot.position.x += stepx;
