@@ -18,7 +18,7 @@ var points = [];
   points.push(new THREE.Vector2(0.7,-0.5));
   points.push(new THREE.Vector2(2,-1.5));
   points.push(new THREE.Vector2(0,-1.5));
-  
+ 
   var headForm = new THREE.TorusKnotGeometry(0.5, 0.1, 100, 10 );
   //var headForm = new THREE.DodecahedronGeometry(0.5);
   var esferaForma = new THREE.SphereGeometry(1);
@@ -72,9 +72,9 @@ wall4 = new Wall();
 
 wall1.position.z = -10;
 wall2.rotation.y = 3.1416 / 2;
-wall2.position.x = 9.5;
+wall2.position.x = 9.75;
 wall3.rotation.y = 3.1416 / 2;
-wall3.position.x = -9.5;
+wall3.position.x = -9.75;
 wall4.position.z = 10;
 
 var iluminacion = new THREE.PointLight(0xFFFFFF);
@@ -94,7 +94,7 @@ camara.rotation.x = -3.1416 / 2 + 0.02;
 
 renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerHeight*0.95, window.innerHeight*0.95);
-
+console.log( renderer.getMaxAnisotropy());
 document.body.appendChild( renderer.domElement);
 
 renderer.shadowMapEnabled = true;
@@ -124,12 +124,31 @@ if(collisionOne.length > 0 && collisionOne[0].distance <= 2) {stepx = - 0.1;  st
 if(collisionThree.length > 0 && collisionThree[0].distance <= 2) {stepx = 0; stepz = 0.1;}
 if(collisionFour.length > 0 && collisionFour[0].distance <= 2) {stepx = 0.1; stepz = 0;}
 
+if(collisionTwo.length > 0 && collisionTwo[0].distance <= 2
+   && collisionOne.length > 0 && collisionOne[0].distance <= 2){
+     stepx = -0.1; 
+     stepz = 0;
+   }
+
+if(collisionThree.length > 0 && collisionThree[0].distance <= 2
+   && collisionOne.length > 0 && collisionOne[0].distance <= 2){
+     stepx = -0; 
+     stepz = 0.1;
+   }
+
+if(collisionThree.length > 0 && collisionThree[0].distance <= 2
+   && collisionFour.length > 0 && collisionFour[0].distance <= 2){
+     stepx = 0.1; 
+     stepz = 0;
+   }
+   
+if(collisionTwo.length > 0 && collisionTwo[0].distance <= 2
+   && collisionFour.length > 0 && collisionFour[0].distance <= 2){
+     stepx = 0; 
+     stepz = -0.1;
+   }
 
 
-console.log   (stepx);
-console.log   (stepz);
-console.log   (robot.position.x);
-console.log   (robot.position.z);
 
 robot.position.x += stepx;
 robot.position.z += stepz;
