@@ -111,7 +111,7 @@ raycaster4 = new THREE.Raycaster(robot.position,new THREE.Vector3(0,0,1));
 }
 
 function loop(){
-
+var rot = 0;
 collisionOne = raycaster1.intersectObject(wall1,true);
 collisionTwo = raycaster2.intersectObject(wall2,true);
 collisionThree = raycaster3.intersectObject(wall3,true);
@@ -124,14 +124,17 @@ if((collisionOne.length > 0 && (collisionOne[0].distance <= 2)) ||
    (collisionTwo.length > 0 && (collisionTwo[0].distance <= 2)) ||
    (collisionThree.length > 0 && (collisionThree[0].distance <= 2)) ||
    (collisionFour.length > 0 && (collisionFour[0].distance < 2))){
-   	stepx = -stepx;	
-   
+    rot += Math.PI;
    }
-robot.position.x += stepx;
-raycaster2.set(robot.position,new THREE.Vector3(1,0,0));
-raycaster3.set(robot.position,new THREE.Vector3(-1,0,0));
-raycaster1.set(robot.position,new THREE.Vector3(0,0,1));
-raycaster4.set(robot.position,new THREE.Vector3(0,0,-1));
+robot.position.x += Math.cos(rot)*stepx;
+robot.position.z += Math.sin(rot)*stepz;
+
+
+
+raycaster2.set(robot.position,new THREE.Vector3(Math.cos(rot),0,Math.sin(rot)));
+raycaster3.set(robot.position,new THREE.Vector3(Math.cos(rot),0,Math.sin(rot)));
+raycaster1.set(robot.position,new THREE.Vector3(Math.cos(rot),0,Math.sin(rot)));
+raycaster4.set(robot.position,new THREE.Vector3(Math.cos(rot),0,Math.sin(rot)));
 requestAnimationFrame(loop);
 renderer.render(escena, camara);
 }
