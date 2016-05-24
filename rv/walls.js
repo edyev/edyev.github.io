@@ -1,8 +1,10 @@
 function Wall(){
   THREE.Object3D.call(this);
+  var texture = new THREE.TextureLoader().load( './walls.jpg');
   
   this.wall = new THREE.Mesh(new THREE.BoxGeometry(20,5,0.5),
-                       new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('./walls.jpg').anisotropy(4)}));
+                       new THREE.MeshBasicMaterial({map:texture}));
+  texture.anisotropy = 4;
   this.add(this.wall);
 }
 
