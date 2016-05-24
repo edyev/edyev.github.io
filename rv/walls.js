@@ -116,18 +116,15 @@ collisionOne = raycaster1.intersectObject(wall1,true);
 collisionTwo = raycaster2.intersectObject(wall2,true);
 collisionThree = raycaster3.intersectObject(wall3,true);
 collisionFour = raycaster4.intersectObject(wall4,true) ;
-console.log(collisionTwo);
-console.log(collisionOne);
-console.log(collisionThree);
-console.log(collisionFour);
 
 
 
-if((collisionOne > 0 && (collisionOne[0].distance <= 2)) ||
-   (collisionTwo > 0 && (collisionTwo[0].distance <= 2)) ||
-   (collisionThree > 0 && (collisionThree[0].distance <= 2)) ||
-   (collisionFour > 0 && (collisionFour[0].distance < 2))){
-   	console.log(10);	
+
+if((collisionOne.length > 0 && (collisionOne[0].distance <= 2)) ||
+   (collisionTwo.length > 0 && (collisionTwo[0].distance <= 2)) ||
+   (collisionThree.length > 0 && (collisionThree[0].distance <= 2)) ||
+   (collisionFour.length > 0 && (collisionFour[0].distance < 2))){
+   	stepx = -stepx;	
    
    }
 robot.position.x += stepx;
