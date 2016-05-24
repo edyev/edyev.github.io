@@ -143,6 +143,8 @@ renderer.render(escena, camara);
 }
 
 var camara, escena, renderer,wall1,wall2,wall3,wall4,raycaster,robot,stepx,stepz,cyl;
+var raycaster1, raycaster2,raycaster3, raycaster4;
+var collisionOne, collisionTwo,collisionThree, collisionFour;
 var collideMatrix = [];
 setup();
 loop();
