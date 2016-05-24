@@ -119,11 +119,13 @@ collisionFour = raycaster4.intersectObject(wall4,true) ;
 
 
 
-
-if(collisionOne.length > 0 && collisionOne[0].distance <= 2) {stepx = - 0.1;  stepz = 0;}
 if(collisionTwo.length > 0 && collisionTwo[0].distance <= 2){ stepx = 0; stepz = -0.1  ;}
-if(collisionThree.length > 0 && collisionThree[0].distance <= 2) {stepx = 0; stepz = -0.1;}
-if(collisionFour.length > 0 && collisionFour[0].distance < 2) {stepx = -0.1; stepz = 0;}
+if(collisionOne.length > 0 && collisionOne[0].distance <= 2) {stepx = - 0.1;  stepz = 0;}
+if(collisionThree.length > 0 && collisionThree[0].distance <= 2) {stepx = 0; stepz = 0.1;}
+if(collisionFour.length > 0 && collisionFour[0].distance <= 2) {stepx = -0.1; stepz = 0;}
+
+
+
 console.log   (stepx);
 console.log   (stepz);
 console.log   (robot.position.x);
