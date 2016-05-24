@@ -102,7 +102,7 @@ wall1.castShadow = true;
 robot.castShadow = true;
 iluminacion.castShadow = true;
 stepx = 0;
-stepz = 0.1;
+stepz = -0.1;
 raycaster2 = new THREE.Raycaster(robot.position,new THREE.Vector3(1,0,0));
 raycaster3 = new THREE.Raycaster(robot.position,new THREE.Vector3(-1,0,0));
 raycaster1 = new THREE.Raycaster(robot.position,new THREE.Vector3(0,0,-1));
@@ -124,7 +124,11 @@ if(collisionOne.length > 0 && collisionOne[0].distance <= 2) {stepx = - 0.1;  st
 if(collisionTwo.length > 0 && collisionTwo[0].distance <= 2){ stepx = 0; stepz = -0.1  ;}
 if(collisionThree.length > 0 && collisionThree[0].distance <= 2) {stepx = 0; stepz = -0.1;}
 if(collisionFour.length > 0 && collisionFour[0].distance < 2) {stepx = -0.1; stepz = 0;}
-   
+console.log   (stepx);
+console.log   (stepz);
+console.log   (robot.position.x);
+console.log   (robot.position.z);
+
 robot.position.x += stepx;
 robot.position.z += stepz;
 
