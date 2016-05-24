@@ -124,7 +124,7 @@ if((collisionOne.length > 0 && (collisionOne[0].distance <= 2)) ||
    (collisionTwo.length > 0 && (collisionTwo[0].distance <= 2)) ||
    (collisionThree.length > 0 && (collisionThree[0].distance <= 2)) ||
    (collisionFour.length > 0 && (collisionFour[0].distance < 2))){
-    rot += Math.PI;
+    rot += Math.PI/2;
    }
 robot.position.x += Math.cos(rot)*stepx;
 robot.position.z += Math.sin(rot)*stepz;
