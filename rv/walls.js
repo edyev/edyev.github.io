@@ -4,7 +4,7 @@ function Wall(){
   
   this.wall = new THREE.Mesh(new THREE.BoxGeometry(20,5,0.5),
                        new THREE.MeshBasicMaterial({map:texture}));
-  texture.anisotropy = 4;
+  texture.anisotropy = 32;
   this.add(this.wall);
 }
 
