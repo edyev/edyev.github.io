@@ -72,18 +72,10 @@ wall4 = new Wall();
 
 wall1.position.z = -10;
 wall2.rotation.y = 3.1416 / 2;
-wall2.position.x = 9;
+wall2.position.x = 9.5;
 wall3.rotation.y = 3.1416 / 2;
-wall3.position.x = -9;
+wall3.position.x = -9.5;
 wall4.position.z = 10;
-
-
-
-
-
-
-
-
 
 var iluminacion = new THREE.PointLight(0xFFFFFF);
 iluminacion.position.y = 7;
@@ -113,8 +105,8 @@ stepx = 0.1;
 stepz = stepx;
 raycaster2 = new THREE.Raycaster(robot.position,new THREE.Vector3(1,0,0));
 raycaster3 = new THREE.Raycaster(robot.position,new THREE.Vector3(-1,0,0));
-raycaster1 = new THREE.Raycaster(robot.position,new THREE.Vector3(0,0,1));
-raycaster4 = new THREE.Raycaster(robot.position,new THREE.Vector3(0,0,-1));
+raycaster1 = new THREE.Raycaster(robot.position,new THREE.Vector3(0,0,-1));
+raycaster4 = new THREE.Raycaster(robot.position,new THREE.Vector3(0,0,1));
 
 }
 
@@ -124,7 +116,7 @@ collisionOne = raycaster1.intersectObject(wall1,true);
 collisionTwo = raycaster2.intersectObject(wall2,true);
 collisionThree = raycaster3.intersectObject(wall3,true);
 collisionFour = raycaster4.intersectObject(wall4,true) ;
-
+console.out(collisionTwo);
 if((collisionOne > 0 && collisionOne[0].distance < 2) ||
    (collisionTwo > 0 && collisionTwo[0].distance < 2) ||
       (collisionThree > 0 && collisionThree[0].distance < 2) ||
