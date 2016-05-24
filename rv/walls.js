@@ -4,7 +4,7 @@ function Wall(){
   
   this.wall = new THREE.Mesh(new THREE.BoxGeometry(20,5,0.5),
                        new THREE.MeshBasicMaterial({map:texture}));
-  texture.anisotropy = 64;
+  texture.anisotropy = 16;
   this.add(this.wall);
 }
 
@@ -111,10 +111,10 @@ robot.castShadow = true;
 iluminacion.castShadow = true;
 stepx = 0.1;
 stepz = stepx;
-raycaster1 = new THREE.Raycaster(robot.position,new THREE.Vector3(1,0,0));
-raycaster4 = new THREE.Raycaster(robot.position,new THREE.Vector3(-1,0,0));
-raycaster2 = new THREE.Raycaster(robot.position,new THREE.Vector3(0,0,1));
-raycaster3 = new THREE.Raycaster(robot.position,new THREE.Vector3(0,0,-1));
+raycaster2 = new THREE.Raycaster(robot.position,new THREE.Vector3(1,0,0));
+raycaster3 = new THREE.Raycaster(robot.position,new THREE.Vector3(-1,0,0));
+raycaster1 = new THREE.Raycaster(robot.position,new THREE.Vector3(0,0,1));
+raycaster4 = new THREE.Raycaster(robot.position,new THREE.Vector3(0,0,-1));
 
 }
 
