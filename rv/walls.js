@@ -4,7 +4,7 @@ function Wall(){
   
   this.wall = new THREE.Mesh(new THREE.BoxGeometry(20,5,0.5),
                        new THREE.MeshBasicMaterial({map:texture}));
-  texture.anisotropy = 32;
+  texture.anisotropy = 64;
   this.add(this.wall);
 }
 
@@ -23,9 +23,9 @@ wall4 = new Wall();
 
 wall1.position.z = -10;
 wall2.rotation.y = 3.1416 / 2;
-wall2.position.x = 10;
+wall2.position.x = 9.5;
 wall3.rotation.y = 3.1416 / 2;
-wall3.position.x = -10;
+wall3.position.x = -9.5;
 wall4.position.z = 10;
 
 collideMatrix.push(wall1);
