@@ -117,7 +117,7 @@ collisionTwo = raycaster2.intersectObject(wall2,true);
 collisionThree = raycaster3.intersectObject(wall3,true);
 collisionFour = raycaster4.intersectObject(wall4,true) ;
 console.log(collisionTwo);
-console.log(collisionTwo[0].distance);
+console.log(collisionTwo.distance);
 
 if((collisionOne > 0 && collisionOne[0].distance < 2) ||
    (collisionTwo > 0 && collisionTwo[0].distance < 2) ||
