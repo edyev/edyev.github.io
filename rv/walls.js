@@ -134,6 +134,10 @@ if((collisionOne > 0 && collisionOne[0].distance < 2) ||
    
    }
 robot.position.x += stepx;
+raycaster2.set(robot.position,new THREE.Vector3(1,0,0));
+raycaster3.set(robot.position,new THREE.Vector3(-1,0,0));
+raycaster1.set(robot.position,new THREE.Vector3(0,0,1));
+raycaster4.set(robot.position,new THREE.Vector3(0,0,-1));
 requestAnimationFrame(loop);
 renderer.render(escena, camara);
 }
