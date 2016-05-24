@@ -1,7 +1,8 @@
 function Wall(){
   THREE.Object3D.call(this);
+  
   this.wall = new THREE.Mesh(new THREE.BoxGeometry(20,5,0.5),
-                       new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('./walls.jpg')}));
+                       new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('./walls.jpg').anisotropy(4)}));
   this.add(this.wall);
 }
 
@@ -92,34 +93,9 @@ stepz = stepx;
 
 
 function loop(){
-	var originPoint = robot.position.clone();
-//	console.log(originPoint);
+
+
 requestAnimationFrame(loop);
-//console.log(robot.geometry.vertices);
-for (var i = 0; i < robot.geometry.vertices.length; i++ ){
-  var robotVertex = robot.geometry.vertices[i].clone();
-  //console.log(robotVertex);
-  var wallVertex = robotVertex.applyMatrix4( robot.matrix );
-  var collisionVector = wallVertex.sub( robot.position);
-  var ray = new THREE.Raycaster( originPoint, collisionVector.clone().normalize() );
-  collisions = ray.intersectObjects( collideMatrix );
-  console.log(collisions);
- // if ( collisions.length > 0  && collisions[0].distance < collisionVector.length() ){
-   if(collisions.length > 0){
-    stepz = -stepz;
-    console.log(collideMatrix);
-    console.log(20);
-  }
-  
-  }
-  
-  //console.log(collideMatrix);
-
-
-//robot.position.x += stepx;
-//robot.position.z += stepz;
-
-
 renderer.render(escena, camara);
 }
 
