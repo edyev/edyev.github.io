@@ -19,10 +19,10 @@ function setup(){
   var head  = new THREE.Mesh(headForm,material);
   var esfera2 = new THREE.Mesh(esferaForma);
   var body = new THREE.Mesh(bodyForm, material);
-  var leg1 = new THREE.Mesh(legForm);
-  var leg2 = new THREE.Mesh(legForm);
-  var foot1 = new THREE.Mesh(footForm);
-  var foot2 = new THREE.Mesh(footForm);
+  var leg1 = new THREE.Mesh(legForm, material);
+  var leg2 = new THREE.Mesh(legForm,material);
+  var foot1 = new THREE.Mesh(footForm,material);
+  var foot2 = new THREE.Mesh(footForm,material);
   
   foot1.position.x = 0.15 + 0.05 + Math.sin(.2),
   foot1.position.y = -3.55,
