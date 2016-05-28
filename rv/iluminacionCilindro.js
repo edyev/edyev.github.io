@@ -9,16 +9,15 @@ function Wall(){
 Wall.prototype = new THREE.Object3D();
 function setup(){
 THREE.ImageUtils.crossOrigin = '';
-robot = new THREE.Mesh(new THREE.SphereGeometry(.8,30,30), new THREE.MeshBasicMaterial());
-cyl = new THREE.Mesh(new THREE.CylinderGeometry(1,2,2,30), new THREE.MeshBasicMaterial());
+robot = new THREE.Mesh(new THREE.DodecahedronGeometry(1), new THREE.MeshPhongMaterial({color:0xccaa00}));
+cyl = new THREE.Mesh(new THREE.CylinderGeometry(1,2,2,30), new THREE.MeshPhongMaterial({color:0xcc9900}));
 
 wall1 = new Wall();
 wall2 = new Wall();
 wall3 = new Wall();
 wall4 = new Wall();
 floor = new THREE.Mesh(new THREE.BoxGeometry(20,20,0.25),
-                       new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('./floor.jpg')}));
-
+                       new THREE.MeshPhongMaterial({color:0x0033cc}));
 
 cyl.position.y = 7;
 floor.rotation.x = 3.1416 / 2;
@@ -31,7 +30,7 @@ wall3.position.x = -10;
 wall4.position.z = 10;
 robot.position.y = 1.5;
 
-var iluminacion = new THREE.PointLight(0xFFFFFF);
+var iluminacion = new THREE.PointLight(0xffd966);
 iluminacion.position.y = 7;
 escena = new THREE.Scene();
 escena.add(floor);
@@ -40,10 +39,6 @@ escena.add(wall2);
 escena.add(wall3);
 escena.add(wall4);
 escena.add(robot, cyl);
-escena.add(iluminacion);
-
-
-
 escena.add(iluminacion);
 
 camara = new THREE.PerspectiveCamera();
@@ -72,11 +67,11 @@ stepz = stepx;
 
 function loop(){
 requestAnimationFrame(loop);
-var intersects=raycaster.intersectObjects(escena.children);
-if (intersects.length > 0) stepz = -stepz;
-
-
 renderer.render(escena, camara);
+robot.rotation.x += 0.1;
+robot.rotation.y += 0.1;
+
+
 }
 
 var camara, escena, renderer,wall1,wall2,wall3,wall4,raycaster,robot,stepx,stepz,cyl;
