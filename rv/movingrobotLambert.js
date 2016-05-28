@@ -27,7 +27,7 @@ function setup(){
   light.position.set( 10, 10, 10 );
   var color = new THREE.Color(0x6600cc); //var color = new THREE.Color( 0xff0000 );
   var material = new THREE.MeshLambertMaterial();
-  material.color = color; 
+
   var points = [];
   points.push(new THREE.Vector2(0,2));
   points.push(new THREE.Vector2(0.7,-0.5));
