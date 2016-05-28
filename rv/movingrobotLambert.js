@@ -43,8 +43,8 @@ function setup(){
   escena = new THREE.Scene();
   escena.add( cuerpo );
   escena.add( cabeza );
-  escena.add( piernaD );
-  escena.add( piernaI );
+  //escena.add( piernaD );
+  //escena.add( piernaI );
   camara = new THREE.PerspectiveCamera();
   camara.position.z = 20;
   
