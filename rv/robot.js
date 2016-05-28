@@ -13,7 +13,7 @@ function setup(){
   var footForm = new THREE.TorusGeometry(0.3,0.05,16,100);
   //var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
  var material = new THREE.MeshNormalMaterial();
- material.wireframe(true);
+ material.wireframe = true;
   
   
   var head  = new THREE.Mesh(headForm,material);
