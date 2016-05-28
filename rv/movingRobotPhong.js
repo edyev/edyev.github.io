@@ -23,7 +23,7 @@ function Pierna(){
  
 Pierna.prototype = new THREE.Object3D();
 function setup(){
-  var light = new THREE.PointLight(0xf5f5f5, 4 );
+  var light = new THREE.PointLight(0xf5f5f5, 2 );
   light.position.set( 10, 10, 10 );
   var color = new THREE.Color(0x6600cc); //var color = new THREE.Color( 0xff0000 );
   var material = new THREE.MeshPhongMaterial({color:0x6600aa});
@@ -32,6 +32,8 @@ function setup(){
   points.push(new THREE.Vector2(0.7,-0.5));
   points.push(new THREE.Vector2(2,-1.5));
   points.push(new THREE.Vector2(0,-1.5));
+  escena = new THREE.Scene();
+  escena.add( cuerpo );
   cuerpo = new THREE.Mesh( new THREE.LatheGeometry(points),material);
   material.color = new THREE.Color(0x7fffd4);
   cabeza = new THREE.Mesh(new THREE.TorusKnotGeometry(0.5,.1,100,10),material);
@@ -43,8 +45,7 @@ function setup(){
   piernaD.position.z = -1;
   piernaI.position.z = 1;
   step = 0.01;
-  escena = new THREE.Scene();
-  escena.add( cuerpo );
+  
   escena.add( cabeza );
   escena.add( piernaD );
   escena.add( piernaI );
