@@ -23,8 +23,8 @@ function Pierna(){
  
 Pierna.prototype = new THREE.Object3D();
 function setup(){
-  var light = new THREE.PointLight( 0xff0000, 1, 100 );
-  light.position.set( 0, 20, 10 );
+  var light = new THREE.PointLight( 0xff0000, 1 );
+  light.position.set( 0, 7, 2 );
   var color = new THREE.Color(0x6600cc); //var color = new THREE.Color( 0xff0000 );
   var material = new THREE.MeshLambertMaterial();
   material.color = color; 
