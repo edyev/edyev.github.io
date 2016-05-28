@@ -1,7 +1,7 @@
 function Pierna(){
   THREE.Object3D.call(this);
-  this.pierna = new THREE.Mesh( new THREE.CylinderGeometry(0.1,0.1,2),new THREE.MeshPhongMaterial({color:0x6600aa}));
-  this.pie = new THREE.Mesh( new THREE.TorusGeometry(0.3,0.05,16,100),new THREE.MeshPhongMaterial({color:0x6600aa}));
+  this.pierna = new THREE.Mesh( new THREE.CylinderGeometry(0.1,0.1,2),new THREE.MeshPhongMaterial({color:0x3366ff}));
+  this.pie = new THREE.Mesh( new THREE.TorusGeometry(0.3,0.05,16,100),new THREE.MeshPhongMaterial({color:0x3366ff}));
   this.pierna.position.y = -1;
   this.pie.rotation.x = 3.1416 / 2;
   this.pie.position.y = -2;
@@ -27,13 +27,13 @@ function setup(){
   light.position.set( 10, 10, 10 );
   var color = new THREE.Color(0x6600cc); //var color = new THREE.Color( 0xff0000 );
   var material = new THREE.MeshPhongMaterial({color:0x6600aa});
-
   var points = [];
   points.push(new THREE.Vector2(0,2));
   points.push(new THREE.Vector2(0.7,-0.5));
   points.push(new THREE.Vector2(2,-1.5));
   points.push(new THREE.Vector2(0,-1.5));
   cuerpo = new THREE.Mesh( new THREE.LatheGeometry(points),material);
+  material.color = new THREE.Color(0x7fffd4);
   cabeza = new THREE.Mesh(new THREE.TorusKnotGeometry(0.5,.1,100,10),material);
   piernaD = new Pierna();
   piernaI = new Pierna();
