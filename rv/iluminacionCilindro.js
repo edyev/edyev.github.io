@@ -59,7 +59,7 @@ wall2.castShadow = true;
 wall3.castShadow = true;
 wall4.castShadow = true;
 robot.castShadow = true;
-floor.castShadow = true;
+floor.receiveShadow = true;
 iluminacion.castShadow = true;
 
 stepx = 0.1;
