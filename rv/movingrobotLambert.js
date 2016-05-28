@@ -24,7 +24,8 @@ function Pierna(){
 Pierna.prototype = new THREE.Object3D();
 function setup(){
   var color = new THREE.Color(0x6600cc); //var color = new THREE.Color( 0xff0000 );
-  var material = new THREE.MeshLambertMaterial(color);
+  var material = new THREE.MeshLambertMaterial();
+  material.color = color; 
   var points = [];
   points.push(new THREE.Vector2(0,2));
   points.push(new THREE.Vector2(0.7,-0.5));
