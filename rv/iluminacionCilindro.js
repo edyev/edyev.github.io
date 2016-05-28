@@ -56,10 +56,10 @@ renderer.setSize( window.innerHeight*0.95, window.innerHeight*0.95);
 document.body.appendChild( renderer.domElement);
 
 renderer.shadowMapEnabled = true;
-wall1.castShadow = true;
-wall2.castShadow = true;
-wall3.castShadow = true;
-wall4.castShadow = true;
+wall1.receiveShadow = true;
+wall2.receiveShadow = true;
+wall3.receiveShadow = true;
+wall4.receiveShadow = true;
 robot.castShadow = true;
 floor.receiveShadow = true;
 iluminacion.castShadow = true;
