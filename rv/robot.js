@@ -12,7 +12,8 @@ function setup(){
   var bodyForm = new THREE.LatheGeometry(points, 20, 0, 2*Math.PI);//LatheGeometry(points, segments, phiStart, phiLength)
   var footForm = new THREE.TorusGeometry(0.3,0.05,16,100);
   //var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
- var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+ var material = new THREE.MeshNormalMaterial();
+ material.wireframe(true);
   
   
   var head  = new THREE.Mesh(headForm,material);
