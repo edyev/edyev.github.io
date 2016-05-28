@@ -1,6 +1,5 @@
 function Pierna(){
   THREE.Object3D.call(this);
-  
   this.pierna = new THREE.Mesh( new THREE.CylinderGeometry(0.1,0.1,2),new THREE.MeshLambertMaterial({color:0x00AA00}));
   this.pie = new THREE.Mesh( new THREE.TorusGeometry(0.3,0.05,16,100),new THREE.MeshLambertMaterial({color:0x9900FF}));
   this.pierna.position.y = -1;
@@ -24,8 +23,9 @@ function Pierna(){
  
 Pierna.prototype = new THREE.Object3D();
 function setup(){
-  var material = new THREE.MeshBasicMaterial({color:0x009999});
-   var points = [];
+  var color = new THREE.Color(0x6600cc); //var color = new THREE.Color( 0xff0000 );
+  var material = new THREE.MeshLambertMaterial(color);
+  var points = [];
   points.push(new THREE.Vector2(0,2));
   points.push(new THREE.Vector2(0.7,-0.5));
   points.push(new THREE.Vector2(2,-1.5));
@@ -43,8 +43,8 @@ function setup(){
   escena = new THREE.Scene();
   escena.add( cuerpo );
   escena.add( cabeza );
-  //escena.add( piernaD );
-  //escena.add( piernaI );
+  escena.add( piernaD );
+  escena.add( piernaI );
   camara = new THREE.PerspectiveCamera();
   camara.position.z = 20;
   
