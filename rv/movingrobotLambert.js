@@ -1,7 +1,7 @@
 function Pierna(){
   THREE.Object3D.call(this);
-  this.pierna = new THREE.Mesh( new THREE.CylinderGeometry(0.1,0.1,2),new THREE.MeshLambertMaterial({color:0x00AA00}));
-  this.pie = new THREE.Mesh( new THREE.TorusGeometry(0.3,0.05,16,100),new THREE.MeshLambertMaterial({color:0x9900FF}));
+  this.pierna = new THREE.Mesh( new THREE.CylinderGeometry(0.1,0.1,2),new THREE.MeshLambertMaterial({color:0x6600cc}));
+  this.pie = new THREE.Mesh( new THREE.TorusGeometry(0.3,0.05,16,100),new THREE.MeshLambertMaterial({color:0x6600cc}));
   this.pierna.position.y = -1;
   this.pie.rotation.x = 3.1416 / 2;
   this.pie.position.y = -2;
@@ -23,8 +23,8 @@ function Pierna(){
  
 Pierna.prototype = new THREE.Object3D();
 function setup(){
-  var light = new THREE.PointLight( 0xff0000, 1 );
-  light.position.set( 0, 7, 2 );
+  var light = new THREE.PointLight( 0xff0000, 10 );
+  light.position.set( 7, 7, 0 );
   var color = new THREE.Color(0x6600cc); //var color = new THREE.Color( 0xff0000 );
   var material = new THREE.MeshLambertMaterial();
   material.color = color; 
