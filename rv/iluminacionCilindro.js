@@ -20,6 +20,7 @@ floor = new THREE.Mesh(new THREE.BoxGeometry(20,20,0.25),
                        new THREE.MeshPhongMaterial({color:0x0033cc}));
 
 cyl.position.y = 7;
+cyl.position.z = -4;
 floor.rotation.x = 3.1416 / 2;
 
 wall1.position.z = -10;
@@ -29,7 +30,7 @@ wall3.rotation.y = 3.1416 / 2;
 wall3.position.x = -10;
 wall4.position.z = 10;
 robot.position.y = 1.5;
-
+robot.position.z = -4;
 var iluminacion = new THREE.PointLight(0xffd966);
 iluminacion.position.y = 7;
 escena = new THREE.Scene();
