@@ -40,7 +40,7 @@ function setup(){
   escena.add( piernaI );
   escena.add( light );
   camara = new THREE.CombinedCamera( window.innerWidth / 2, window.innerHeight / 2, 70, 1, 1000, - 500, 1000 );
-  camara.position.z = 20;
+  camara.position.z = 10;
   
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*0.95, window.innerHeight*0.95 );
@@ -74,6 +74,6 @@ function loop(){
 
 var escena, camara, renderer;
 var step, piernaD, piernaI,cabeza,cuerpo;
-var camoption = 1;
+var camOption = 1;
 setup();
 loop();
