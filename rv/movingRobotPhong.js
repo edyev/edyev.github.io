@@ -33,8 +33,8 @@ function setup(){
   points.push(new THREE.Vector2(2,-1.5));
   points.push(new THREE.Vector2(0,-1.5));
   escena = new THREE.Scene();
-  escena.add( cuerpo );
   cuerpo = new THREE.Mesh( new THREE.LatheGeometry(points),material);
+  escena.add( cuerpo );
   material.color = new THREE.Color(0x7fffd4);
   cabeza = new THREE.Mesh(new THREE.TorusKnotGeometry(0.5,.1,100,10),material);
   piernaD = new Pierna();
