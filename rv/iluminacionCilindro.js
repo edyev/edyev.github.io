@@ -33,6 +33,8 @@ robot.position.y = 1.5;
 robot.position.z = -10;
 var iluminacion = new THREE.PointLight(0xffd966);
 iluminacion.position.y = 7;
+iluminacion.position.z = -10;
+
 escena = new THREE.Scene();
 escena.add(floor);
 escena.add(wall1);
