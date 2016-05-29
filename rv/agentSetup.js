@@ -80,6 +80,7 @@ function Robot (size, x,y){
   this.actuator = malla;
   this.actuator.rotation.x = Math.PI / 2;
   this.actuator.commands=[];
+  this.actuator.castShadow = true;
   this.add(this.actuator);
 }
 
