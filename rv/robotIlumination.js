@@ -22,9 +22,9 @@ Environment.prototype.setMap=function(map){
 
 function setup(){
   
-  floor = new THREE.Mesh(new THREE.BoxGeometry(19.5,20,0.5),new THREE.MeshPhongMaterial({color:0xFF0000}));
+  floor = new THREE.Mesh(new THREE.BoxGeometry(19.5,20,0.5),new THREE.MeshPhongMaterial({color:0xf2f2f2}));
   floor.position.z = -1;
-  iluminacion = new THREE.PointLight(0xffd966);
+  iluminacion = new THREE.PointLight(0x8533ff);
   iluminacion.position.z = 10;
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxx";
