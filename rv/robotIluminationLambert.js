@@ -1,5 +1,5 @@
 function Wall(size,x,y){
-  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshLambertMaterial(color:0xf2f2f));
+  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshLambertMaterial({color:0xf2f2f}));
   this.size=size;
   this.position.x=x;
   this.position.y=y;
