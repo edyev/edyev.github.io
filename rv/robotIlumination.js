@@ -3,6 +3,8 @@ function Wall(size,x,y){
   this.size=size;
   this.position.x=x;
   this.position.y=y;
+  this.receiveShadow = true;
+  this.castShadow = true;
 }
 
 Wall.prototype=new THREE.Mesh();
