@@ -1,5 +1,5 @@
 function Wall(size,x,y){
-  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshPhongMaterial({color:0xf2f2f}));
+  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshPhongMaterial({color:0xfffff}));
   this.size=size;
   this.position.x=x;
   this.position.y=y;
@@ -25,7 +25,7 @@ function setup(){
   floor = new THREE.Mesh(new THREE.BoxGeometry(19.5,20,0.5),new THREE.MeshPhongMaterial({color:0xf2f2f2}));
   floor.position.z = -1;
   iluminacion = new THREE.PointLight(0x8533ff);
-  iluminacion.position.z = 10;
+  iluminacion.position.z = 15;
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxx";
   mapa[1]  = "xr                 x";
