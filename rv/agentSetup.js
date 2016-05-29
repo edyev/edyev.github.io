@@ -4,7 +4,6 @@ function RobotMesh(){
   points.push(new THREE.Vector2(0.7,-0.5));
   points.push(new THREE.Vector2(2,-1.5));
   points.push(new THREE.Vector2(0,-1.5));
-  
   var headForm = new THREE.TorusKnotGeometry(0.5, 0.1, 100, 10 );
   var esferaForma = new THREE.SphereGeometry(1);
   var legForm = new THREE.CylinderGeometry(0.1,0.1,2);
@@ -67,7 +66,8 @@ function Robot (size, x,y){
   points.push(new THREE.Vector2(0,-0.37));
   var bodyForm = new THREE.CylinderGeometry(0.3,0.6,2,100);
   var headForm = new THREE.TorusKnotGeometry(0.25, 0.1, 100, 10);
-  var texture = THREE.ImageUtils.loadTexture('./robot.gif');
+  var texture =  new THREE.TextureLoader().load( './robot.gif');
+  texture.anisotropy = 16;
   var body = new THREE.Mesh(bodyForm, new THREE.MeshBasicMaterial({map:texture}));
   var head = new THREE.Mesh(headForm, new THREE.MeshBasicMaterial({map:texture}));
   head.position.y = 2;
