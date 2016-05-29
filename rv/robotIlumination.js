@@ -21,7 +21,6 @@ Environment.prototype.setMap=function(map){
 function setup(){
   
   floor = new THREE.Mesh(new THREE.BoxGeometry(21,21,0.5),new THREE.MeshPhongMaterial({color:0xFF0000}));
-  floor.rotation.x = Math.PI / 2;
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxx";
   mapa[1]  = "xr                 x";
