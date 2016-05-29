@@ -62,10 +62,12 @@ function Robot (size, x,y){
   this.sensor = new Sensor();
   var points = [];
   points.push(new THREE.Vector2(0,2));
-  points.push(new THREE.Vector2(0.7,-0.5));
-  points.push(new THREE.Vector2(2,-1.5));
-  points.push(new THREE.Vector2(0,-1.5));
-  this.actuator = new THREE.Mesh(new THREE.LatheGeometry(points, 20, 0, 2*Math.PI),new THREE.MeshNormalMaterial());
+  points.push(new THREE.Vector2(0.35,-0.25));
+  points.push(new THREE.Vector2(1,-0.75));
+  points.push(new THREE.Vector2(0,-0.75));
+  var malla = new THREE.Mesh(new THREE.LatheGeometry(points, 20, 0, 2*Math.PI),new THREE.MeshNormalMaterial());
+  malla.rotate.x = Math.Pi / 2;
+  this.actuator = malla;
   this.actuator.commands=[];
   this.add(this.actuator);
 }
