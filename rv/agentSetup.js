@@ -69,7 +69,7 @@ function Robot (size, x,y){
   var texture =  new THREE.TextureLoader().load( './robot.gif');
   texture.anisotropy = 16;
   var body = new THREE.Mesh(bodyForm, new THREE.MeshBasicMaterial({map:texture}));
-  var head = new THREE.Mesh(headForm, new THREE.MeshBasicMaterial({map:texture}));
+  var head = new THREE.Mesh(headForm, new THREE.MeshNormalMaterial());
   head.position.y = 2;
   var geometry = new THREE.Geometry();
   THREE.GeometryUtils.merge(geometry,body);
