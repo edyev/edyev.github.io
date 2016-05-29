@@ -60,7 +60,8 @@ Sensor.prototype = new THREE.Raycaster();
 function Robot (size, x,y){
   Agent.call(this,x,y);
   this.sensor = new Sensor();
-  this.actuator = new THREE.Mesh(new THREE.SphereGeometry(1.2,100),new THREE.MeshNormalMaterial());
+  var headForm = new THREE.TorusKnotGeometry(0.1, 0.1, 100, 10 );
+  this.actuator = new THREE.Mesh(headForm,new THREE.MeshNormalMaterial());
   this.actuator.commands=[];
   this.add(this.actuator);
 }
