@@ -47,7 +47,7 @@ function setup(){
   environment = new Environment();
   
   environment.setMap(mapa);
-  enviroment.add(floor);
+  environment.add(floor);
   floor.receiveShadow = true;
   
   camara=new THREE.PerspectiveCamera();
