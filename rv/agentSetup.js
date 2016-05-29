@@ -65,8 +65,10 @@ function Robot (size, x,y){
   points.push(new THREE.Vector2(0.15,-0.12));
   points.push(new THREE.Vector2(0.5,-0.37));
   points.push(new THREE.Vector2(0,-0.37));
-  var body = new THREE.CylinderGeometry(0.2,0.4,2,100);
-  var head = new THREE.TorusKnotGeometry(0.25, 0.1, 100, 10 );
+  var bodyForm = new THREE.CylinderGeometry(0.2,0.4,2,100);
+  var headForm = new THREE.TorusKnotGeometry(0.25, 0.1, 100, 10 );
+  var body = new THREE.Mesh(bodyForm, new THREE.MeshNormalMaterial() );
+  var head = new THREE.Mesh(headForm, new THREE.MeshNormalMaterial() );
   head.position.z = 2;
   var geometry = new THREE.Geometry();
   THREE.GeometryUtils.merge(geometry,body);
