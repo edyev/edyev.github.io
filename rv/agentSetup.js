@@ -66,7 +66,7 @@ function Robot (size, x,y){
   points.push(new THREE.Vector2(0.5,-0.37));
   points.push(new THREE.Vector2(0,-0.37));
   var malla = new THREE.Mesh(new THREE.LatheGeometry(points, 20, 0, 2*Math.PI),new THREE.MeshNormalMaterial());
- // malla.rotation.x = Math.Pi / 2;
+  malla.rotation.x = Math.Pi / 2;
   this.actuator = malla;
   this.actuator.commands=[];
   this.add(this.actuator);
