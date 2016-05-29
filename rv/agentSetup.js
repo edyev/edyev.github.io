@@ -66,14 +66,16 @@ function Robot (size, x,y){
   points.push(new THREE.Vector2(0.5,-0.37));
   points.push(new THREE.Vector2(0,-0.37));
   var bodyForm = new THREE.CylinderGeometry(0.3,0.6,2,100);
-  var headForm = new THREE.TorusKnotGeometry(0.25, 0.1, 100, 10 );
-  var body = new THREE.Mesh(bodyForm, new THREE.MeshNormalMaterial());
-  var head = new THREE.Mesh(headForm, new THREE.MeshNormalMaterial());
+  var headForm = new THREE.TorusKnotGeometry(0.25, 0.1, 100, 10);
+  var texture = THREE.ImageUtils.loadTexture('./body.gif');
+  var body = new THREE.Mesh(bodyForm, new THREE.MeshBasicMaterial({map:texture}));
+  var head = new THREE.Mesh(headForm, new THREE.MeshBasicMaterial({map:texture}));
   head.position.y = 2;
   var geometry = new THREE.Geometry();
   THREE.GeometryUtils.merge(geometry,body);
   THREE.GeometryUtils.merge(geometry,head);
-  malla = new THREE.Mesh(geometry, new THREE.MeshNormalMaterial());
+  malla = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({map:texture}));
+  
   this.actuator = malla;
   this.actuator.rotation.x = Math.PI / 2;
   this.actuator.commands=[];
