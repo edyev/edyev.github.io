@@ -1,4 +1,4 @@
-function RobotMesh(material){
+function RobotMesh(){
   var points = [];
   points.push(new THREE.Vector2(0,2));
   points.push(new THREE.Vector2(0.7,-0.5));
@@ -10,8 +10,8 @@ function RobotMesh(material){
   var legForm = new THREE.CylinderGeometry(0.1,0.1,2);
   var bodyForm = new THREE.LatheGeometry(points, 20, 0, 2*Math.PI);//LatheGeometry(points, segments, phiStart, phiLength)
   var footForm = new THREE.TorusGeometry(0.3,0.05,16,100);
-  //var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
-  this.material = material;
+  var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+  
   var head  = new THREE.Mesh(headForm,material);
   var esfera2 = new THREE.Mesh(esferaForma);
   var body = new THREE.Mesh(bodyForm, material);
@@ -50,6 +50,7 @@ function RobotMesh(material){
 }
 
 RobotMesh.prototype = new THREE.Mesh();
+
 function Sensor(position, direction) {
   THREE.Raycaster.call(this,position, direction);
   this.colision = false;
@@ -60,7 +61,7 @@ Sensor.prototype = new THREE.Raycaster();
 function Robot (size, x,y){
   Agent.call(this,x,y);
   this.sensor = new Sensor();
-  this.actuator = new RobotMesh(new THREE.MeshNormalMaterial);
+  this.actuator = new RobotMesh();
   this.actuator.commands=[];
   this.add(this.actuator);
 }
