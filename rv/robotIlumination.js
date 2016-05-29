@@ -22,7 +22,7 @@ Environment.prototype.setMap=function(map){
 
 function setup(){
   
-  floor = new THREE.Mesh(new THREE.BoxGeometry(20,20,0.5),new THREE.MeshPhongMaterial({color:0xFF0000}));
+  floor = new THREE.Mesh(new THREE.BoxGeometry(19.5,20,0.5),new THREE.MeshPhongMaterial({color:0xFF0000}));
   floor.position.z = -1;
   iluminacion = new THREE.PointLight(0xffd966);
   iluminacion.position.z = 10;
