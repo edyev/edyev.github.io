@@ -67,7 +67,7 @@ function Robot (size, x,y){
   points.push(new THREE.Vector2(0,-0.37));
   var malla = new THREE.Mesh(new THREE.LatheGeometry(points, 20, 0, 2*Math.PI),new THREE.MeshNormalMaterial());
  // malla.rotation.x = Math.Pi / 2;
-  this.actuator = new THREE.Mesh(new THREE.LatheGeometry(points, 20, 0, 2*Math.PI),new THREE.MeshNormalMaterial());
+  this.actuator = malla;
   this.actuator.commands=[];
   this.add(this.actuator);
 }
@@ -77,7 +77,7 @@ Robot.prototype = new Agent();
 Robot.prototype.sense = function(environment){
   this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
   var obstaculo= this.sensor.intersectObjects(environment.children,true);
-  if((obstaculo.length>0 && (obstaculo[0].distance<=.25)))
+  if((obstaculo.length>0 && (obstaculo[0].distance<=.15)))
     this.sensor.colision=true;
   else
     this.sensor.colision=false;
