@@ -49,7 +49,7 @@ function RobotMesh(material){
   
 }
 
-RobotMesh.prototype = new Mesh();
+RobotMesh.prototype = new THREE.Mesh();
 function Sensor(position, direction) {
   THREE.Raycaster.call(this,position, direction);
   this.colision = false;
