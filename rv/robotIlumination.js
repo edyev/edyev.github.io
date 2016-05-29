@@ -51,10 +51,7 @@ function setup(){
   
   environment.setMap(mapa);
   environment.add(floor, iluminacion);
-  floor.receiveShadow = true;
-   renderer.shadowMap.enabled=true;
  
- iluminacion.castShadow=true;
   camara=new THREE.PerspectiveCamera();
   camara.position.z=30;
   
@@ -63,6 +60,10 @@ function setup(){
   document.body.appendChild(renderer.domElement);
   
   environment.add(camera);
+   floor.receiveShadow = true;
+   renderer.shadowMap.enabled=true;
+ 
+ iluminacion.castShadow=true;
 }
 
 function loop(){
