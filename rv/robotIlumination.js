@@ -52,7 +52,9 @@ function setup(){
   environment.setMap(mapa);
   environment.add(floor, iluminacion);
   floor.receiveShadow = true;
-  
+   renderer.shadowMap.enabled=true;
+ 
+ iluminacion.castShadow=true;
   camara=new THREE.PerspectiveCamera();
   camara.position.z=30;
   
