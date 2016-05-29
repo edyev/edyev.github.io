@@ -61,10 +61,10 @@ function Robot (size, x,y){
   Agent.call(this,x,y);
   this.sensor = new Sensor();
   var points = [];
-  points.push(new THREE.Vector2(0,2));
-  points.push(new THREE.Vector2(0.35,-0.25));
-  points.push(new THREE.Vector2(1,-0.75));
-  points.push(new THREE.Vector2(0,-0.75));
+  points.push(new THREE.Vector2(0,.5));
+  points.push(new THREE.Vector2(0.15,-0.12));
+  points.push(new THREE.Vector2(0.5,-0.37));
+  points.push(new THREE.Vector2(0,-0.37));
   var malla = new THREE.Mesh(new THREE.LatheGeometry(points, 20, 0, 2*Math.PI),new THREE.MeshNormalMaterial());
  // malla.rotation.x = Math.Pi / 2;
   this.actuator = malla;
