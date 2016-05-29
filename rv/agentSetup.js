@@ -69,13 +69,10 @@ function Robot (size, x,y){
   var headForm = new THREE.TorusKnotGeometry(0.25, 0.1, 100, 10 );
   var body = new THREE.Mesh(bodyForm, new THREE.MeshNormalMaterial() );
   var head = new THREE.Mesh(headForm, new THREE.MeshNormalMaterial() );
-  head.position.z = 2;
+  head.position.y = 3;
   var geometry = new THREE.Geometry();
   THREE.GeometryUtils.merge(geometry,body);
   THREE.GeometryUtils.merge(geometry,head);
-  
- 
-  
   malla = new THREE.Mesh(geometry, new THREE.MeshNormalMaterial());
   this.actuator = malla;
   this.actuator.rotation.x = Math.PI / 2;
