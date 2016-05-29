@@ -44,7 +44,7 @@ function RobotMesh(){
   THREE.GeometryUtils.merge(forma, body);
 
   this.malla = new THREE.Mesh(forma,material);
-  this.add(malla);
+  this.add(this.malla);
   
 }
 
