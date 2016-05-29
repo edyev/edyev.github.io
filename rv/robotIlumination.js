@@ -21,6 +21,9 @@ Environment.prototype.setMap=function(map){
 function setup(){
   
   floor = new THREE.Mesh(new THREE.BoxGeometry(21,21,0.5),new THREE.MeshPhongMaterial({color:0xFF0000}));
+  floor.position.z = -1;
+  iluminacion = new THREE.PointLight(0xffd966);
+  iluminacion.position.z = 5;
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxx";
   mapa[1]  = "xr                 x";
@@ -47,7 +50,7 @@ function setup(){
   environment = new Environment();
   
   environment.setMap(mapa);
-  environment.add(floor);
+  environment.add(floor, iluminacion);
   floor.receiveShadow = true;
   
   camara=new THREE.PerspectiveCamera();
@@ -70,7 +73,7 @@ function loop(){
   renderer.render(environment,camara);
 }
 
-var environment, camera, renderer,floor;
+var environment, camera, renderer,floor, iluminacion;
 
 setup();
 loop();
