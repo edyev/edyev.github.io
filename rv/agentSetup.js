@@ -43,6 +43,7 @@ function RobotMesh(){
   THREE.GeometryUtils.merge(forma, body);
 
   this.malla = new THREE.Mesh(forma,material);
+  this.malla.castShadow = true;
   this.add(this.malla);
   
 }
