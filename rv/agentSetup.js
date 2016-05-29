@@ -65,8 +65,16 @@ function Robot (size, x,y){
   points.push(new THREE.Vector2(0.15,-0.12));
   points.push(new THREE.Vector2(0.5,-0.37));
   points.push(new THREE.Vector2(0,-0.37));
-  var malla = new THREE.Mesh(new THREE.CylinderGeometry(0.15,0.35,2,100),new THREE.MeshNormalMaterial());
+  var body = new THREE.CylinderGeometry(0.2,0.4,2,100);
+  var head = new THREE.TorusKnotGeometry(0.25, 0.1, 100, 10 );
+  head.position.z = 2;
+  var geometry = new THREE.Geometry();
+  THREE.GeometryUtils.merge(geometry,body);
+  THREE.GeometryUtils.merge(geometry,head);
   
+ 
+  
+  malla = new THREE.Mesh(geometry, new THREE.MeshNormalMaterial());
   this.actuator = malla;
   this.actuator.rotation.x = Math.PI / 2;
   this.actuator.commands=[];
