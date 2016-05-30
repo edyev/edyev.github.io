@@ -22,9 +22,9 @@ Environment.prototype.setMap=function(map){
 
 function setup(){
   
-  floor = new THREE.Mesh(new THREE.BoxGeometry(19.5,20,0.5),new THREE.MeshPhongMaterial({color:0xf2f2f2}));
+  floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({color:0xf2f2f2}));
   floor.position.z = -1;
-  iluminacion = new THREE.PointLight(0x8533ff);
+  iluminacion = new THREE.PointLight(0x009999);
   iluminacion.position.z = 15;
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxxxxxxx";
@@ -36,13 +36,13 @@ function setup(){
   mapa[6]  = "x                       x";
   mapa[7]  = "x                       x";
   mapa[8]  = "xxx      x              x";
-  mapa[9]  = "x        x              x";
-  mapa[10] = "x        x              x";
-  mapa[11] = "x        xxxxx          x";
+  mapa[9]  = "x        x  xxxxx       x";
+  mapa[10] = "x        x      x       x";
+  mapa[11] = "x        xxxxx  x       x";
   mapa[12] = "x                       x";
-  mapa[13] = "x   xx xxxx             x";
-  mapa[14] = "x   x                   x";
-  mapa[15] = "x   x    x              x";
+  mapa[13] = "x   xx xxxxx            x";
+  mapa[14] = "x   x      x            x";
+  mapa[15] = "x   x    x x            x";
   mapa[16] = "xxxxx    x              x";
   mapa[17] = "x        xxxx x         x";
   mapa[18] = "x   r         x         x";
