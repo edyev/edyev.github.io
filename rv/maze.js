@@ -28,7 +28,7 @@ function setup(){
   iluminacion.position.z = 30;
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxxxxxxx";
-  mapa[1]  = "x         xxxxxxxxx     x";
+  mapa[1]  = "x                       x";
   mapa[2]  = "x                 x     x";
   mapa[3]  = "x     xxxxxx      x     x";
   mapa[4]  = "x     x       x   x     x";
