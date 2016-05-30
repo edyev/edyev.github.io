@@ -27,7 +27,7 @@ function setup(){
   iluminacion = new THREE.PointLight(0x6600cc,1);
   iluminacion.position.z = 10;
   var mapa = new Array();
-  mapa[0]  = "xxxxxxxxxxxxxxxxxxxxxxxxx";
+  mapa[0]  = "x   xxxxxxxxxxxxxxxxxxxxx";
   mapa[1]  = "x                       x";
   mapa[2]  = "x                 x     x";
   mapa[3]  = "x     xxxxxx      x     x";
