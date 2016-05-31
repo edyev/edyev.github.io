@@ -116,6 +116,7 @@ Robot.prototype.act=function(environment){
   //goStraight()
   //rotateCW()
   //rotateCCW()
+  }
   
   Robot.prototype.operations={};
   
