@@ -67,6 +67,7 @@ function setup(){
   }
   
   mapa[rowSet][colSet] = "r";
+  console.log(mapa[rowSet][colSet]);
   environment = new Environment();
   
   environment.setMap(mapa);
