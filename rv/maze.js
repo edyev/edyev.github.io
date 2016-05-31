@@ -23,9 +23,11 @@ Environment.prototype.setMap=function(map){
 }
 
 function setup(){
+  var floorTexture = new THREE.TextureLoader().load( "./floor.jpg" );
+  floorTexture.anisotropy = 16;
   var rowSet = Math.floor(Math.random()*25);
   var colSet = Math.floor(Math.random()*25);
-  floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({color:0x0066ff}));
+  floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({map:floorTexture}));
   floor.position.z = -1;
   iluminacion = new THREE.PointLight(0xFFFFFF,1);
   iluminacion.position.z = 18;
