@@ -91,7 +91,9 @@ function setup(){
    floor.receiveShadow = true;
    renderer.shadowMap.enabled=true;
  
- iluminacion.castShadow=true;
+ iluminacionR.castShadow=true;
+  iluminacionG.castShadow=true;
+   iluminacionB.castShadow=true;
 }
 
 function loop(){
