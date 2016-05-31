@@ -3,7 +3,7 @@ function Wall(size,x,y){
   texture.anisotropy = 16;
   var transMat = new THREE.MeshPhongMaterial({map:texture});
   transMat.transparent = true;
-  transMat.opacity = 0.4;
+  transMat.opacity = 0.2;
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),transMat);
   this.size=size;
   this.position.x=x;
