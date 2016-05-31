@@ -29,8 +29,13 @@ function setup(){
   var colSet = Math.floor(Math.random()*25);
   floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({map:floorTexture}));
   floor.position.z = -1;
-  iluminacion = new THREE.PointLight(0xFFFFFF,1);
-  iluminacion.position.z = 18;
+  iluminacionR = new THREE.PointLight(0xFF0000,1);
+  iluminacionR.set(0,5,18);
+  iluminacionG = new THREE.PointLight(0x00FF00,1);
+  iluminacionG.set(-5,-5,18);
+  iluminacionB = new THREE.PointLight(0x0000FF,1);
+  iluminacionB.set(5,-5,18);
+  
   var mapa = new Array();
   mapa[0]  = "x  xxxxxxxxxxxxxxxxxxxxxx";
   mapa[1]  = "x         x xxx x       x";
@@ -73,7 +78,7 @@ function setup(){
   environment = new Environment();
   
   environment.setMap(mapa);
-  environment.add(floor, iluminacion);
+  environment.add(floor, iluminacionR,iluminacionG,iluminacionB);
  
   camara=new THREE.PerspectiveCamera();
   camara.position.z=30;
