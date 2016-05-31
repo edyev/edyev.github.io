@@ -2,7 +2,7 @@ function Wall(size,x,y){
   var texture = new THREE.TextureLoader().load( "./wallsmaze.jpg" );
   texture.anisotropy = 16;
   var transMat = new THREE.MeshPhongMaterial({map:texture});
-  transMat.transparency = true;
+  transMat.transparent = true;
   transMat.opacity = 0.3;
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),transMat);
   this.size=size;
