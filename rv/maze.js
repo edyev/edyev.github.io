@@ -55,10 +55,17 @@ function setup(){
   mapa[22] = "x                       x";
   mapa[23] = "x                       x";
   mapa[24] = "xxxxxxxxxxxxxxxxxxxxxxxxx";
+  console.log(rowSet);
+  console.log(colSet);
+  
   while(mapa[rowSet][colSet]=="x"){
-    var rowSet = Math.floor(Math.random()*25);
-    var colSet = Math.floor(Math.random()*25);
+    rowSet = Math.floor(Math.random()*25);
+    colSet = Math.floor(Math.random()*25);
+    console.log(rowSet);
+  console.log(colSet);
+    
   }
+  
   mapa[rowSet][colSet] = "r";
   environment = new Environment();
   
