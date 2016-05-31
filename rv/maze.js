@@ -56,12 +56,12 @@ function setup(){
   mapa[14] = "x x x      x x   x    x x";
   mapa[15] = "x   x xxxx x x xxx xxxx x";
   mapa[16] = "xxxxx    x   x          x";
-  mapa[17] = "x x   xx xxxxxx         x";
-  mapa[18] = "x xxx  x      x         x";
-  mapa[19] = "x x    xxxxxx x         x";
-  mapa[20] = "x x xxxx      x         x";
-  mapa[21] = "x x                     x";
-  mapa[22] = "x x                     x";
+  mapa[17] = "x x   xx xxxxxx xxxxxxxxx";
+  mapa[18] = "x xxx x       x x       x";
+  mapa[19] = "x x   x xxxxx x x xxxxx x";
+  mapa[20] = "x x xxx    x  x         x";
+  mapa[21] = "x x     xxxx            x";
+  mapa[22] = "x xxxx                  x";
   mapa[23] = "x                       x";
   mapa[24] = "xxxxxxxxxxxxxxxxxxxxxxxxx";
   console.log(rowSet);
