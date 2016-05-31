@@ -3,7 +3,7 @@ function Wall(size,x,y){
   texture.anisotropy = 16;
   var transMat = new THREE.MeshPhongMaterial({map:texture});
   transMat.transparent = true;
-  transMat.opacity = 0.3;
+  transMat.opacity = 0.4;
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),transMat);
   this.size=size;
   this.position.x=x;
@@ -30,7 +30,7 @@ function setup(){
   floorTexture.anisotropy = 16;
   var rowSet = Math.floor(Math.random()*25);
   var colSet = Math.floor(Math.random()*25);
-  floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({color:0xFFFFFF}));
+  floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({map:floorTexture}));
   floor.position.z = -1;
   reflector = new THREE.SpotLight(0xFFFFFF);
   
