@@ -62,7 +62,7 @@ function setup(){
   mapa[20] = "x x xxx    x  x   x   x x";
   mapa[21] = "x x     xxxx    x x x x x";
   mapa[22] = "x xxxx       x xx xxx x x";
-  mapa[23] = "x       xxxxxx x        x";
+  mapa[23] = "x      xxxxxxx x        x";
   mapa[24] = "xxxxxxxxxxxxxxxxxxxxxxxxx";
   console.log(rowSet);
   console.log(colSet);
