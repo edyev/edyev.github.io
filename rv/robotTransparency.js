@@ -32,10 +32,10 @@ function setup(){
   var colSet = Math.floor(Math.random()*25);
   floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({map:floorTexture}));
   floor.position.z = -1;
-  reflector = new THREE.SpotLight(0x000000);
+  reflector = new THREE.SpotLight(0xFFFFFF,2);
   
   iluminacionR = new THREE.PointLight(0xFFFFFF,1);
-  iluminacionR.position.set(0,0,15);
+  iluminacionR.position.set(0,0,10);
   /*iluminacionG = new THREE.PointLight(0x00FF00,0.5);
   iluminacionG.position.set(-2.5,-2.5,15);
   iluminacionB = new THREE.PointLight(0x0000FF,0.5);
