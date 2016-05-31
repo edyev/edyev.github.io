@@ -27,7 +27,7 @@ function setup(){
   floorTexture.anisotropy = 16;
   var rowSet = Math.floor(Math.random()*25);
   var colSet = Math.floor(Math.random()*25);
-  floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({color:0xFFFFFF}));
+  floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({map:floorTexture}));
   floor.position.z = -1;
   reflector = new THREE.SpotLight(0xFFFFFF);
   
@@ -59,10 +59,10 @@ function setup(){
   mapa[17] = "x x   xx xxxxxx xxxxxxxxx";
   mapa[18] = "x xxx x       x x       x";
   mapa[19] = "x x   x xxxxx x x xxxxx x";
-  mapa[20] = "x x xxx    x  x         x";
-  mapa[21] = "x x     xxxx            x";
-  mapa[22] = "x xxxx                  x";
-  mapa[23] = "x                       x";
+  mapa[20] = "x x xxx    x  x   x   x x";
+  mapa[21] = "x x     xxxx      x x x x";
+  mapa[22] = "x xxxx       x xx xxx x x";
+  mapa[23] = "x       xxxxxx x        x";
   mapa[24] = "xxxxxxxxxxxxxxxxxxxxxxxxx";
   console.log(rowSet);
   console.log(colSet);
