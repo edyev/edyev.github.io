@@ -96,10 +96,15 @@ Robot.prototype.sense = function(environment){
 }
 Robot.prototype.plan=function (environment){
   this.actuator.commands=[];
-  if (this.sensor.colision==true)
-    this.actuator.commands.push('rotateCCW');
-  else
-    this.actuator.commands.push('goStraight');
+  if (this.sensor.colision==true){
+    if (Math.random()<0.5){
+    this.actuator.commands.push('rotateCCW');}
+    else{
+    this.actuator.commands.push('rotateCW');
+    }
+  }
+  else{
+    this.actuator.commands.push('goStraight');}
 }
 Robot.prototype.act=function(environment){
   var command=this.actuator.commands.pop();
