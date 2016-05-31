@@ -28,7 +28,7 @@ function setup(){
   floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({color:0x0066ff}));
   floor.position.z = -1;
   iluminacion = new THREE.PointLight(0xFFFFFF,1);
-  iluminacion.position.z = 10;
+  iluminacion.position.z = 18;
   var mapa = new Array();
   mapa[0]  = "x  xxxxxxxxxxxxxxxxxxxxxx";
   mapa[1]  = "x         x xxx x       x";
@@ -36,11 +36,11 @@ function setup(){
   mapa[3]  = "x   x   x xxxxx x       x";
   mapa[4]  = "x x   x x    x  x xxxxxxx";
   mapa[5]  = "x xxxxxxxxxx x xx       x";
-  mapa[6]  = "x         r        xxxxxxx";
-  mapa[7]  = "xxxxxxxx       x        x";
-  mapa[8]  = "x        x     x        x";
-  mapa[9]  = "xxx      x xxxxx        x";
-  mapa[10] = "x        x              x";
+  mapa[6]  = "x         r  x    xxxxxxx";
+  mapa[7]  = "xxxxxxxx     x x xxxx x x";
+  mapa[8]  = "x        x     x      x x";
+  mapa[9]  = "xxx      x xxxxx xxxx x x";
+  mapa[10] = "x        x          xxx x";
   mapa[11] = "x        xxxxx          x";
   mapa[12] = "x                       x";
   mapa[13] = "x   xx xxxxx            x";
