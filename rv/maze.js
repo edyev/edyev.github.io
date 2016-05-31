@@ -1,5 +1,6 @@
 function Wall(size,x,y){
-  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshPhongMaterial({color:0xffff00}));
+  var texture = new THREE.TextureLoader().load( ".wallmaze.jpg" );
+  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshPhongMaterial({map:texture}));
   this.size=size;
   this.position.x=x;
   this.position.y=y;
