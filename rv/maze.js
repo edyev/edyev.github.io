@@ -23,38 +23,43 @@ Environment.prototype.setMap=function(map){
 }
 
 function setup(){
-  
+  var rowSet = floor(Math.random()*25);
+  var colSet = floor(Math.random()*25);
   floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({color:0x0066ff}));
   floor.position.z = -1;
   iluminacion = new THREE.PointLight(0xFFFFFF,1);
   iluminacion.position.z = 10;
   var mapa = new Array();
   mapa[0]  = "x  xxxxxxxxxxxxxxxxxxxxxx";
-  mapa[1]  = "x         x      x      x";
-  mapa[2]  = "xxxxxxxxx x      xx   xxx";
-  mapa[3]  = "x   x   x xxxx   x      x";
+  mapa[1]  = "x         x      x x    x";
+  mapa[2]  = "xxxxxxxxx x x x  x   xxxx";
+  mapa[3]  = "x   x   x xxxxx  x      x";
   mapa[4]  = "x x   x x    x          x";
   mapa[5]  = "x xxxxxxxxxx x    x     x";
   mapa[6]  = "x                       x";
   mapa[7]  = "x   x         xxxx      x";
   mapa[8]  = "x        x              x";
-  mapa[9]  = "xxx      x  xxxxx       x";
-  mapa[10] = "x        x      x       x";
-  mapa[11] = "x        xxxxx  x       x";
+  mapa[9]  = "xxx      x xxxxx        x";
+  mapa[10] = "x        x     x        x";
+  mapa[11] = "x        xxxxx x        x";
   mapa[12] = "x                       x";
   mapa[13] = "x   xx xxxxx            x";
   mapa[14] = "x   x      x            x";
   mapa[15] = "x   x    x x            x";
   mapa[16] = "xxxxx    x              x";
   mapa[17] = "x        xxxx x         x";
-  mapa[18] = "x   r         x         x";
+  mapa[18] = "x             x         x";
   mapa[19] = "x             x         x";
   mapa[20] = "x             x         x";
   mapa[21] = "x                       x";
   mapa[22] = "x                       x";
   mapa[23] = "x                       x";
   mapa[24] = "xxxxxxxxxxxxxxxxxxxxxxxxx";
-  
+  while(mapa[rowSet][colSet]=="x"){
+    var rowSet = floor(Math.random()*25);
+    var colSet = floor(Math.random()*25);
+  }
+  mapa[rowSet][colSet] = "r";
   environment = new Environment();
   
   environment.setMap(mapa);
