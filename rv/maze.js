@@ -104,7 +104,7 @@ function loop(){
   environment.sense();
   environment.plan();
   environment.act();
-  reflector.position.set(Robot.position.x,Robot.position.y,Robot.position.y);
+ 
   renderer.render(environment,camara);
 }
 
