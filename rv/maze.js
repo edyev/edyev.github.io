@@ -23,8 +23,8 @@ Environment.prototype.setMap=function(map){
 }
 
 function setup(){
-  var rowSet = floor(Math.random()*25);
-  var colSet = floor(Math.random()*25);
+  var rowSet = Math.floor(Math.random()*25);
+  var colSet = Math.floor(Math.random()*25);
   floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({color:0x0066ff}));
   floor.position.z = -1;
   iluminacion = new THREE.PointLight(0xFFFFFF,1);
@@ -56,8 +56,8 @@ function setup(){
   mapa[23] = "x                       x";
   mapa[24] = "xxxxxxxxxxxxxxxxxxxxxxxxx";
   while(mapa[rowSet][colSet]=="x"){
-    var rowSet = floor(Math.random()*25);
-    var colSet = floor(Math.random()*25);
+    var rowSet = Math.floor(Math.random()*25);
+    var colSet = Math.floor(Math.random()*25);
   }
   mapa[rowSet][colSet] = "r";
   environment = new Environment();
