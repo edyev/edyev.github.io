@@ -27,14 +27,14 @@ function setup(){
   floorTexture.anisotropy = 16;
   var rowSet = Math.floor(Math.random()*25);
   var colSet = Math.floor(Math.random()*25);
-  floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({map:0xFFFFFF}));
+  floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({color:0xFFFFFF}));
   floor.position.z = -1;
   iluminacionR = new THREE.PointLight(0xFF0000,1);
-  iluminacionR.position.set(0,7,18);
+  iluminacionR.position.set(0,5,18);
   iluminacionG = new THREE.PointLight(0x00FF00,1);
-  iluminacionG.position.set(-7,-7,18);
+  iluminacionG.position.set(-5,-5,18);
   iluminacionB = new THREE.PointLight(0x0000FF,1);
-  iluminacionB.position.set(7,-7,18);
+  iluminacionB.position.set(5,-5,18);
   
   var mapa = new Array();
   mapa[0]  = "x  xxxxxxxxxxxxxxxxxxxxxx";
