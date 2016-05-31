@@ -31,13 +31,13 @@ function setup(){
   iluminacion.position.z = 10;
   var mapa = new Array();
   mapa[0]  = "x  xxxxxxxxxxxxxxxxxxxxxx";
-  mapa[1]  = "x         x      x x    x";
-  mapa[2]  = "xxxxxxxxx x x x  x   xxxx";
+  mapa[1]  = "x         x   x  x      x";
+  mapa[2]  = "xxxxxxxxx x x    x xxxxxx";
   mapa[3]  = "x   x   x xxxxx  x      x";
-  mapa[4]  = "x x   x x    x          x";
+  mapa[4]  = "x x   x x    x   xxxxxx x";
   mapa[5]  = "x xxxxxxxxxx x    x     x";
   mapa[6]  = "x                       x";
-  mapa[7]  = "x   x         xxxx      x";
+  mapa[7]  = "xxxxxxxx                x";
   mapa[8]  = "x        x              x";
   mapa[9]  = "xxx      x xxxxx        x";
   mapa[10] = "x        x     x        x";
