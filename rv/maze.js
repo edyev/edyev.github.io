@@ -26,7 +26,7 @@ function setup(){
   
   floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({color:0x0066ff}));
   floor.position.z = -1;
-  iluminacion = new THREE.PointLight(0x6600cc,1);
+  iluminacion = new THREE.PointLight(0xFFFFFF,1);
   iluminacion.position.z = 10;
   var mapa = new Array();
   mapa[0]  = "x   xxxxxxxxxxxxxxxxxxxxx";
