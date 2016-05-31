@@ -1,5 +1,6 @@
 function Wall(size,x,y){
   var texture = new THREE.TextureLoader().load( "./wallsmaze.jpg" );
+  texture.anisotropy = 16;
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshPhongMaterial({map:texture}));
   this.size=size;
   this.position.x=x;
