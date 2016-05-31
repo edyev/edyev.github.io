@@ -32,15 +32,15 @@ function setup(){
   var colSet = Math.floor(Math.random()*25);
   floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({map:floorTexture}));
   floor.position.z = -1;
-  reflector = new THREE.SpotLight(0xFFFFFF);
+  reflector = new THREE.SpotLight(0x000000);
   
-  iluminacionR = new THREE.PointLight(0xFF0000,0.5);
-  iluminacionR.position.set(0,2.5,15);
-  iluminacionG = new THREE.PointLight(0x00FF00,0.5);
+  iluminacionR = new THREE.PointLight(0xFFFFFF,1);
+  iluminacionR.position.set(0,0,15);
+  /*iluminacionG = new THREE.PointLight(0x00FF00,0.5);
   iluminacionG.position.set(-2.5,-2.5,15);
   iluminacionB = new THREE.PointLight(0x0000FF,0.5);
   iluminacionB.position.set(2.5,-2.5,15);
-  
+  */
   var mapa = new Array();
   mapa[0]  = "x  xxxxxxxxxxxxxxxxxxxxxx";
   mapa[1]  = "x         x xxx x       x";
@@ -83,7 +83,7 @@ function setup(){
   environment = new Environment();
   
   environment.setMap(mapa);
-  environment.add(floor, iluminacionR,iluminacionG,iluminacionB,reflector);
+  environment.add(floor, iluminacionR,reflector);
  
   camara=new THREE.PerspectiveCamera();
   camara.position.z=30;
@@ -97,8 +97,8 @@ function setup(){
    renderer.shadowMap.enabled=true;
  reflector.castShadow = true;
  iluminacionR.castShadow=true;
-  iluminacionG.castShadow=true;
-   iluminacionB.castShadow=true;
+ // iluminacionG.castShadow=true;
+   //iluminacionB.castShadow=true;
 }
 
 function loop(){
