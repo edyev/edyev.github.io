@@ -80,7 +80,7 @@ function setup(){
   environment = new Environment();
   
   environment.setMap(mapa);
-  environment.add(floor, iluminacionR,iluminacionG,iluminacionB,reflector);
+  environment.add(floor, iluminacionR,iluminacionG,iluminacionB,reflector,reflector.target);
  
   camara=new THREE.PerspectiveCamera();
   camara.position.z=30;
