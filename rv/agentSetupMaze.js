@@ -128,7 +128,7 @@ Robot.prototype.act=function(environment){
   
   Robot.prototype.operations.goStraight= function(robot, distance){
   if(distance== undefined)
-    distance= .05;
+    distance= .1;
   robot.position .x+= distance*Math.cos(robot.rotation.z);
   robot.position .y+= distance*Math.sin(robot.rotation.z);
   
