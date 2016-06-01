@@ -76,7 +76,6 @@ function Robot (size, x,y){
   THREE.GeometryUtils.merge(geometry,body);
   THREE.GeometryUtils.merge(geometry,head);
   malla = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({map:texture}));
-  
   this.actuator = malla;
   this.actuator.rotation.x = Math.PI / 2;
   this.actuator.commands=[];
@@ -114,7 +113,7 @@ Robot.prototype.act=function(environment){
     this.operations[command](this);
   else
     console.log('Unknown command');
-  reflector.position.set(this.position.x,this.position.y, 20);
+  reflector.target(this.position.x,this.position.y, this.position.z);
 
   
   //las operaciones posibles con este robot son
