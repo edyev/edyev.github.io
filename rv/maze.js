@@ -39,9 +39,9 @@ function setup(){
   iluminacionB.position.set(2.5,-2.5,15);
   
   var mapa = new Array();
-  mapa[0]  = "x  xxxxxxxxxxxxxxxxxxxxxx";
-  mapa[1]  = "x         x xxx x       x";
-  mapa[2]  = "xxxxxxxxx x     xxxxxxx x";
+  mapa[0]  = "x xxxxxxxxxxxxxxxxxxxxxxx";
+  mapa[1]  = "x x       x xxx x       x";
+  mapa[2]  = "x xxxxxxx x     xxxxxxx x";
   mapa[3]  = "x   x   x xxxxx x       x";
   mapa[4]  = "x x   x x    x  x xxxxxxx";
   mapa[5]  = "x xxxxxxxxxx x xx       x";
