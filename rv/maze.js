@@ -30,7 +30,7 @@ function setup(){
   floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({color:0xFFFFFF}));
   floor.position.z = -1;
   reflector = new THREE.SpotLight(0xFFFFFF,0.5,200,0.10,0.087);
-  reflector.position.set(0,0,10);
+  reflector.position.set(0,-12.5,10);
   iluminacionR = new THREE.PointLight(0xFF0000,0.5);
   iluminacionR.position.set(0,2.5,15);
   iluminacionG = new THREE.PointLight(0x00FF00,0.5);
