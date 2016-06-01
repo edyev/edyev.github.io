@@ -113,6 +113,8 @@ Robot.prototype.act=function(environment){
     this.operations[command](this);
   else
     console.log('Unknown command');
+ 
+ 
   reflector.target.x =this.position.x;
    reflector.target.y = this.position.y;
    reflector.target.z = this.position.z;
