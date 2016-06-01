@@ -113,7 +113,7 @@ Robot.prototype.act=function(environment){
     this.operations[command](this);
   else
     console.log('Unknown command');
-  reflector.target(this.position.x,this.position.y, this.position.z);
+  reflector.target.set(this.position.x,this.position.y, this.position.z);
 
   
   //las operaciones posibles con este robot son
