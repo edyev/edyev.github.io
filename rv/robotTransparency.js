@@ -34,8 +34,8 @@ function setup(){
   floor.position.z = -1;
   reflector = new THREE.SpotLight(0xFFFFFF,2);
   
-  iluminacionR = new THREE.SpotLight(0xFFFFFF,2);
-  iluminacionR.position.set(0,0,5);
+  iluminacionR = new THREE.SpotLight(0xFFFFFF,2,);
+  iluminacionR.position.set(0,-15,0);
   /*iluminacionG = new THREE.PointLight(0x00FF00,0.5);
   iluminacionG.position.set(-2.5,-2.5,15);
   iluminacionB = new THREE.PointLight(0x0000FF,0.5);
@@ -79,7 +79,8 @@ function setup(){
   }
   
   mapa[rowSet][colSet] = "r";
-  console.log(mapa[1][1]);
+  console.log(mapa[1]);
+  console.log("Ok");
   console.log(mapa[rowSet][colSet]);
   environment = new Environment();
   
