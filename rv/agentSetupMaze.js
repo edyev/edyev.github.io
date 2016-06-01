@@ -132,7 +132,7 @@ Robot.prototype.act=function(environment){
     distance= .1;
   robot.position .x+= distance*Math.cos(robot.rotation.z);
   robot.position .y+= distance*Math.sin(robot.rotation.z);
-  if (this.position.y > 12.5){
+  if (robot.position.y > 12.5){
     distance = 0;
     reflector.color = new THREE.Color(0xFF0000);
   }
