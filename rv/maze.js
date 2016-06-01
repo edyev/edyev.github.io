@@ -29,8 +29,8 @@ function setup(){
   var colSet = Math.floor(Math.random()*25);
   floor = new THREE.Mesh(new THREE.BoxGeometry(24.5,25,0.5),new THREE.MeshPhongMaterial({color:0xFFFFFF}));
   floor.position.z = -1;
-  reflector = new THREE.SpotLight(0xFFFFFF,1.5,200,0.15);
-  
+  reflector = new THREE.SpotLight(0xFFFFFF,0.8,200,0.10);
+  reflector.set.position(0,0,10);
   iluminacionR = new THREE.PointLight(0xFF0000,0.5);
   iluminacionR.position.set(0,2.5,15);
   iluminacionG = new THREE.PointLight(0x00FF00,0.5);
