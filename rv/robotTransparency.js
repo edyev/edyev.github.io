@@ -34,8 +34,8 @@ function setup(){
   floor.position.z = -1;
   reflector = new THREE.SpotLight(0xFFFFFF,2);
   
-  iluminacionR = new THREE.PointLight(0xFFFFFF,1);
-  iluminacionR.position.set(0,0,10);
+  iluminacionR = new THREE.SpotLight(0xFFFFFF,2);
+  iluminacionR.position.set(0,0,0);
   /*iluminacionG = new THREE.PointLight(0x00FF00,0.5);
   iluminacionG.position.set(-2.5,-2.5,15);
   iluminacionB = new THREE.PointLight(0x0000FF,0.5);
