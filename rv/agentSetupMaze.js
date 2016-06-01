@@ -115,7 +115,8 @@ Robot.prototype.act=function(environment){
     console.log('Unknown command');
  
  reflector.target.position.set(this.position.x,this.position.y,this.position.z);
-  
+ 
+    
 
   
   //las operaciones posibles con este robot son
@@ -131,7 +132,10 @@ Robot.prototype.act=function(environment){
     distance= .1;
   robot.position .x+= distance*Math.cos(robot.rotation.z);
   robot.position .y+= distance*Math.sin(robot.rotation.z);
-  
+  if (this.position.y > 12.5){
+    distance = 0;
+    reflector.color = new THREE.Color(0xFF0000);
+  }
 }
 
 Robot.prototype.operations.rotateCW= function (robot,angle){
