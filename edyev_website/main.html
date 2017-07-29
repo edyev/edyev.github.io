@@ -4,9 +4,9 @@
         <meta charset = "UTF-8">
         <title> Welcome! </title>
         <link rel = "stylesheet" href = "main_style.css">
-
+        <script src="scripts.js"></script>
     </head>
-    <body>
+    <body  id = "main">
         <header>
             Coming soon ... 
         </header>
@@ -21,14 +21,15 @@
                 </p>
             </a>
             <a  href = "https://www.twitter.com/edyev">
-                <p id="twitter">twitter </p>
+                <p id="twitter">twi</br>tter </p>
             </a>
             <p id="email">email </p>
-            <audio id = "player" src = "Dangerous_Woman_LowQ/03 Be Alright.mp3"
-            controls autoplay >
+            <audio id="song" src = "Dangerous_Woman_LowQ/03 Be Alright.mp3"
+           autoplay >
             </audio>
-            
-
+            <p id="player" onclick="play_toggle()" ></p>
+            <p id="played"></p>
+           
 
         </section>
         
