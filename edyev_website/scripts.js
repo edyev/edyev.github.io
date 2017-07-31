@@ -18,9 +18,11 @@ window.onload = function init(){
     play1.style.width ="240px";
     bdy.style.backgroundColor = "white";
     console.log("DOM ready!!");
+
     song.src = "Dangerous_Woman_LowQ/" + 
                 song_selector[Math.round(Math.random()* coeff)] +
                 ".mp3";
+     console.log(song.src);
     mainLoop();
 
 }
@@ -41,7 +43,7 @@ function title_toggle(){
 
 function mainLoop(){
     //console.log(  play1.style);
-    
+    console.log(song.currentTime);
     time = new Date().getMilliseconds();
     if(time % 2 == 0)
         title_toggle();
