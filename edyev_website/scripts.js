@@ -1,4 +1,4 @@
-var count ;
+var count = 0 ;
 var play1, play2, song , bdy, tit;
 var pwidth = 0, sec_count = 0, last_sec;
 var time;
@@ -22,7 +22,8 @@ window.onload = function init(){
     song.src = "Dangerous_Woman_LowQ/" + 
                 song_selector[Math.round(Math.random()* coeff)] +
                 ".mp3";
-     console.log(song.src);
+    console.log(song.src);
+    song.play();
     mainLoop();
 
 }
