@@ -13,10 +13,7 @@
   <script>
     var data_x = [];
     var data_y =[];
-    for(var i = 0; i < 1500; i++){
-      data_x[i] = i;
-      data_y[i] = Math.random() ;
-    }
+    
     
     var data = [
   {
@@ -24,9 +21,30 @@
     y: data_y,
     type: 'scatter'
   }
+      
+      
 ];
 
-Plotly.newPlot('myDiv', data);
+    
+    
+
+  function loop() {
+    data_x[data_x.length] =data_x.length ;
+    data_y[data_y.length] = data_x.length;
+  var data = [
+  {
+    x: data_x,
+    y: data_y,
+    type: 'scatter'
+  }     
+];
+    
+  Plotly.newPlot('myDiv', data);
+  requestAnimationFrame(loop);
+}
+
+
+loop();
     <!-- JAVASCRIPT CODE GOES HERE -->
   </script>
     </div>
