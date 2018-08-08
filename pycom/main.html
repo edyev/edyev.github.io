@@ -12,14 +12,16 @@
   <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV -->
   <script>
     var data_x = [];
+    var data_y =[];
     for(var i = 0; i < 1500; i++){
       data_x[i] = i;
+      data_y[i] = Math.random() ;
     }
     
     var data = [
   {
     x: data_x,
-    y: data_x,
+    y: data_y,
     type: 'scatter'
   }
 ];
