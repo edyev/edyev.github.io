@@ -7,13 +7,18 @@
 
 <body>
  
-  <title>Consumos energeticos</title>
+  <title>Consumos Energeticos</title>
   <div id="Title"><center>Consumos energeticos</center></div>
   <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV -->
   <script>
+    var data_x = [];
+    for(var i = 0; i < 1500; i++){
+      data_x[i] = i;
+    }
+    
     var data = [
   {
-    x: ['1', '2', '3'],
+    x: [1, 2, 3],
     y: [1.5, 3.45, 250.9],
     type: 'scatter'
   }
