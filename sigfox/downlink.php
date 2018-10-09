@@ -9,6 +9,4 @@
      echo "\"". $_id ."\" : { \"downlinkData\" : \"0102030405160708\" }";
      echo "}";
    } 
-   header("HTTP/1.0 200 OK");
-   header("Content-Type : application/json");
-?>
+   ?>
